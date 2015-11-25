@@ -1,8 +1,6 @@
 {
   "github": "bythepixel/css",
-  "css": [
-    "http://bythepixel.com/docpress-rsc/style.css"
-  ],
+  "css": [],
   "markdown": {
     "plugins": {
       "decorate": {}

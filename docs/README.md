@@ -1,6 +1,6 @@
 # Table of contents
 
-- [css](../README.md)
+- [CSS Style Guide](../README.md)
 - **Components**
   - [About components](components.md)
   - [Elements](elements.md)
