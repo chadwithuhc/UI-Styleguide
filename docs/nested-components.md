@@ -3,31 +3,31 @@
 ![](images/component-nesting.png)
 
 ```html
-<div class='article-link'>
-  <div class='vote-box'>
+<div class="article-link">
+  <div class="vote-box">
     ...
   </div>
-  <h3 class='title'>...</h3>
-  <p class='meta'>...</p>
+  <h3 class="article-link_title">...</h3>
+  <p class="article-link_meta">...</p>
 </div>
 ```
 
 Sometimes it's necessary to nest components. Here are some guidelines for doing that.
 
-## Variants
+## Modifiers
 A component may need to appear a certain way when nested in another component. Avoid modifying the nested component by reaching into it from the containing component.
 
 ```scss
 .article-header {
-  > .vote-box > .up { /* ✗ avoid this */ }
+  .vote-box__up { /* ✗ avoid this */ }
 }
 ```
 
-  Instead, prefer to add a variant to the nested component and apply it from the containing component.
+  Instead, prefer to add a modifier to the nested component and apply it from the containing component.
 
 ```html
-<div class='article-header'>
-  <div class='vote-box -highlight'>
+<div class="article-header">
+  <div class="vote-box--highlight">
     ...
   </div>
   ...
@@ -36,7 +36,9 @@ A component may need to appear a certain way when nested in another component. A
 
 ```scss
 .vote-box {
-  &.-highlight > .up { /* ... */ }
+  &--highlight {
+   .vote-box__up { /* ... */ }
+  }
 }
 ```
 
@@ -44,27 +46,26 @@ A component may need to appear a certain way when nested in another component. A
 Sometimes, when nesting components, your markup can get dirty:
 
 ```html
-<div class='search-form'>
-  <input class='input' type='text'>
-  <button class='search-button -red -large'></button>
+<div class="search-form">
+  <input class="search-form__input" type="text">
+  <button class="search-button search-button--large"></button>
 </div>
 ```
 
 You can simplify this by using your CSS preprocessor's `@extend` mechanism:
 
 ```html
-<div class='search-form'>
-  <input class='input' type='text'>
-  <button class='submit'></button>
+<div class="search-form">
+  <input class="search-form__input" type="text">
+  <button class="search-form__submit"></button>
 </div>
 ```
 
 ```scss
 .search-form {
-  > .submit {
+  &__submit {
     @extend .search-button;
-    @extend .search-button.-red;
-    @extend .search-button.-large;
+    @extend .search-button--large;
   }
 }
 ```

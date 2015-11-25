@@ -1,10 +1,10 @@
 # Table of contents
 
-- [rscss](../README.md)
+- [css](../README.md)
 - **Components**
   - [About components](components.md)
   - [Elements](elements.md)
-  - [Variants](variants.md)
+  - [Modifiers](modifiers.md)
   - [Nested components](nested-components.md)
   - [Layouts](layouts.md)
   - [Helpers](helpers.md)

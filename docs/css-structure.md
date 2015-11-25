@@ -4,15 +4,15 @@
 For each component, place them in their own file.
 
   ```scss
-  /* css/components/search-form.scss */
+  /* css/components/_search-form.scss */
   .search-form {
-    > .button { /* ... */ }
-    > .field { /* ... */ }
-    > .label { /* ... */ }
+    &__button { /* ... */ }
+    &__field { /* ... */ }
+    &__label { /* ... */ }
 
-    // variants
-    &.-small { /* ... */ }
-    &.-wide { /* ... */ }
+    // modifiers
+    &--small { /* ... */ }
+    &--wide { /* ... */ }
   }
   ```
 
@@ -29,10 +29,10 @@ Use no more than 1 level of nesting. It's easy to get lost with too much nesting
   ```scss
   /* ✗ Avoid: 3 levels of nesting */
   .image-frame {
-    > .description {
+    &__description {
       /* ... */
 
-      > .icon {
+      &__icon {
         /* ... */
       }
     }
@@ -40,7 +40,7 @@ Use no more than 1 level of nesting. It's easy to get lost with too much nesting
 
   /* ✓ Better: 2 levels */
   .image-frame {
-    > .description { /* ... */ }
-    > .description > .icon { /* ... */ }
+    &__description { /* ... */ }
+    &__icon { /* ... */ }
   }
   ```

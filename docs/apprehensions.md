@@ -4,7 +4,7 @@ Some people may have apprehensions to these conventions, such as:
 
 #### "But dashes suck"
 
-You're free to omit them and just use regular words, but keep the rest of the ideas in place (components, elements, variants).
+You're free to omit them and just use regular words, but keep the rest of the ideas in place (components, elements, modifiers).
 
 #### "But I can't think of 2 words!"
 
@@ -13,8 +13,10 @@ Some components will only need one word to express their purpose, such as `alert
   * `.alert-box`
   * `.alert-card`
   * `.alert-block`
+  * `.alert-component`
 
   Or for inlines:
 
   * `.link-button`
-  * `.link-span`
+  * `.link-inline`
+  * `.link-label`
