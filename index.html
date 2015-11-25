@@ -3,14 +3,14 @@
   <head>
     <meta charset="utf-8">
     <link rel="stylesheet" href="assets/style.css?t=34b91bfb">
-    <link rel="stylesheet" href="http://ricostacruz.com/docpress-rsc/style.css">
+    <link rel="stylesheet" href="http://bythepixel.com/docpress-rsc/style.css">
     <script src="assets/script.js?t=4a85ba64"></script>
-    <title>rscss</title>
+    <title>css</title>
     <meta name="viewport" content="width=device-width">
     <script>
-      if (false || window.location.hostname.indexOf("rscss.io") === window.location.hostname.length - 8) {
+      if (false || window.location.hostname.indexOf("styleguide.bythepixel.com") === window.location.hostname.length - 25) {
         (function(d,o,c,p,r,e,s){d['GoogleAnalyticsObject']=r;d[r]=d[r]||function(){(d[r].q=d[r].q||[]).push(arguments)},d[r].l=1*new Date();e=o.createElement(c),s=o.getElementsByTagName(c)[0];e.async=1;e.src=p;s.parentNode.insertBefore(e,s)})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-        ga('create',"UA-70062028-1",'auto')
+        ga('create',"UA-XXX",'auto')
       }
     </script>
   </head>
@@ -19,36 +19,21 @@
       <div class="toggle menu-toggle js-menu-toggle"></div>
       <div class="body page-index">
         <div class="header-nav">
-          <div class="right"><a href="https://github.com/rstacruz/rscss" data-title="rstacruz/rscss" class="iconlink">
+          <div class="right"><a href="https://github.com/bythepixel/css" data-title="bythepixel/css" class="iconlink">
               <!-- span.title Open in GitHub--><span class="icon -github"></span></a>
           </div>
         </div>
-        <div class="markdown-body"><h5 style="display:none" id="viewing-this-from-github-visit-the-website-for-the-full-experience.-rscss.io">Viewing this from GitHub? Visit the website for the full experience. <strong><a href="http://rscss.io">rscss.io &#x2192;</a></strong></h5>
+        <div class="markdown-body"><h5 style="display:none" id="viewing-this-from-github-visit-the-website-for-the-full-experience.-styleguide.bythepixel.com">Viewing this from GitHub? Visit the website for the full experience. <strong><a href="http://styleguide.bythepixel.com">styleguide.bythepixel.com &#x2192;</a></strong></h5>
 <hr style="display:none">
-<h1 class="massive-header -with-tagline" id="rscss">rscss</h1>
+<h1 class="massive-header -with-tagline" id="css-style-guide">CSS Style Guide</h1>
 <blockquote>
 <p>Styling CSS without losing&#xA0;your sanity</p>
 </blockquote>
-<p>Reasonable System for CSS Stylesheet Structure.<br>
-A set of simple ideas to guide your process of building maintainable CSS.</p>
-<h2 id="introduction">Introduction</h2>
-<p>Any CSS greater than 1000 lines will get unwieldy. You&apos;ll eventually run into these common pitfalls:</p>
-<ul>
-<li>&quot;What does this class mean?&quot;</li>
-<li>&quot;Is this class still being used?&quot;</li>
-<li>&quot;If I make a new class <code>green</code>, will there be a clash?&quot;</li>
-</ul>
-<p><strong>rscss</strong> is an attempt to make sense of all these. It is not a framework. It&apos;s simply a set of ideas to guide your process of building maintainable CSS for any modern website or application.</p>
-<p class="pull-box">Let&apos;s get started by learning about components.
+<p class="pull-box">Get started by learning about components.
 <a href="components.html">Continue &#x2192;</a></p>
 <hr style="display:none">
-<p style="display:none"><strong>rscss</strong> &#xA9; 2015+, Rico Sta. Cruz. Released under the <a href="http://mit-license.org/">MIT</a> License.<br>
-Authored and maintained by Rico Sta. Cruz with help from contributors (<a href="http://github.com/rstacruz/rscss/contributors">list</a>).</p>
-<blockquote style="display:none">
-<p><a href="http://ricostacruz.com">ricostacruz.com</a> &#xA0;&#xB7;&#xA0;
-GitHub <a href="https://github.com/rstacruz">@rstacruz</a> &#xA0;&#xB7;&#xA0;
-Twitter <a href="https://twitter.com/rstacruz">@rstacruz</a></p>
-</blockquote>
+<p><em>Based upon:</em><br>
+<strong>rscss</strong> &#xA9; 2015+, Rico Sta. Cruz. Released under the <a href="http://mit-license.org/">MIT</a> License.<br></p>
 
         </div>
         <div class="footer-nav">
@@ -58,11 +43,7 @@ Twitter <a href="https://twitter.com/rstacruz">@rstacruz</a></p>
       <div class="menu toc-menu">
         <li class="menu-item -level-0 -parent">
           <ul class="submenu">
-            <li class="menu-item -level-1"><a href="index.html" class="link title -active link-index">rscss</a>
-              <ul class="headings heading-list">
-                <li class="heading-item -depth-2"><a href="#introduction" class="hlink link-introduction">Introduction</a>
-                </li>
-              </ul>
+            <li class="menu-item -level-1"><a href="index.html" class="link title -active link-index">css</a>
             </li>
             <li class="menu-item -level-1 -parent"><span class="title">Components</span>
               <ul class="submenu">
@@ -70,7 +51,7 @@ Twitter <a href="https://twitter.com/rstacruz">@rstacruz</a></p>
                 </li>
                 <li class="menu-item -level-2"><a href="elements.html" class="link title  link-elements">Elements</a>
                 </li>
-                <li class="menu-item -level-2"><a href="variants.html" class="link title  link-variants">Variants</a>
+                <li class="menu-item -level-2"><a href="modifiers.html" class="link title  link-modifiers">Modifiers</a>
                 </li>
                 <li class="menu-item -level-2"><a href="nested-components.html" class="link title  link-nested-components">Nested components</a>
                 </li>

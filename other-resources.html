@@ -3,14 +3,14 @@
   <head>
     <meta charset="utf-8">
     <link rel="stylesheet" href="assets/style.css?t=34b91bfb">
-    <link rel="stylesheet" href="http://ricostacruz.com/docpress-rsc/style.css">
+    <link rel="stylesheet" href="http://bythepixel.com/docpress-rsc/style.css">
     <script src="assets/script.js?t=4a85ba64"></script>
     <title>Other resources</title>
     <meta name="viewport" content="width=device-width">
     <script>
-      if (false || window.location.hostname.indexOf("rscss.io") === window.location.hostname.length - 8) {
+      if (false || window.location.hostname.indexOf("styleguide.bythepixel.com") === window.location.hostname.length - 25) {
         (function(d,o,c,p,r,e,s){d['GoogleAnalyticsObject']=r;d[r]=d[r]||function(){(d[r].q=d[r].q||[]).push(arguments)},d[r].l=1*new Date();e=o.createElement(c),s=o.getElementsByTagName(c)[0];e.async=1;e.src=p;s.parentNode.insertBefore(e,s)})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-        ga('create',"UA-70062028-1",'auto')
+        ga('create',"UA-XXX",'auto')
       }
     </script>
   </head>
@@ -19,35 +19,21 @@
       <div class="toggle menu-toggle js-menu-toggle"></div>
       <div class="body page-other-resources">
         <div class="header-nav">
-          <div class="right"><a href="https://github.com/rstacruz/rscss" data-title="rstacruz/rscss" class="iconlink">
+          <div class="right"><a href="https://github.com/bythepixel/css" data-title="bythepixel/css" class="iconlink">
               <!-- span.title Open in GitHub--><span class="icon -github"></span></a>
           </div>
         </div>
         <div class="markdown-body"><h1 id="other-resources">Other resources</h1>
 <ul>
-<li><a href="https://speakerdeck.com/dafed/managing-css-projects-with-itcss#49">ITCSS</a> (&quot;Inverted Triangle CSS&quot;) is a nice complement to any rscss structure.</li>
+<li><a href="https://speakerdeck.com/dafed/managing-css-projects-with-itcss#49">ITCSS</a> (&quot;Inverted Triangle CSS&quot;) is a nice complement to any CSS structure.</li>
 </ul>
 <h2 id="other-solutions">Other solutions</h2>
-<h3 id="bem">BEM</h3>
-<p><a href="http://bem.info/">BEM</a> is nice, but some may be irked at its unconventional syntax. RSCSS pretty much follows BEM conventions, only with a different syntax.</p>
-<pre><code class="lang-html"><span class="pl-c">&lt;!-- BEM --&gt;</span>
-<span class="hljs-tag">&lt;<span class="pl-ent">form</span> <span class="pl-e">class</span>=<span class="pl-s">&apos;site-search site-search--full&apos;</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="pl-ent">input</span>  <span class="pl-e">class</span>=<span class="pl-s">&apos;site-search__field&apos;</span> <span class="pl-e">type</span>=<span class="pl-s">&apos;text&apos;</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="pl-ent">button</span> <span class="pl-e">class</span>=<span class="pl-s">&apos;site-search__button&apos;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="pl-ent">button</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="pl-ent">form</span>&gt;</span>
-</code></pre>
-<pre><code class="lang-html"><span class="pl-c">&lt;!-- rscss --&gt;</span>
-<span class="hljs-tag">&lt;<span class="pl-ent">form</span> <span class="pl-e">class</span>=<span class="pl-s">&apos;site-search -full&apos;</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="pl-ent">input</span>  <span class="pl-e">class</span>=<span class="pl-s">&apos;field&apos;</span> <span class="pl-e">type</span>=<span class="pl-s">&apos;text&apos;</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="pl-ent">button</span> <span class="pl-e">class</span>=<span class="pl-s">&apos;button&apos;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="pl-ent">button</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="pl-ent">form</span>&gt;</span>
-</code></pre>
 <h2 id="terminologies">Terminologies</h2>
-<p>The same concepts exist in similar ways in other CSS structuring ideologies.</p>
+<p>The same concepts exist in similar ways in other CSS structuring ideologies. We are using <strong>BEM</strong>.</p>
 <table>
 <thead>
 <tr>
-<th>RSCSS</th>
+<th>BTPCSS</th>
 <th>BEM</th>
 <th>SMACSS</th>
 </tr>
@@ -69,7 +55,7 @@
 <td>Layout</td>
 </tr>
 <tr>
-<td>Variant</td>
+<td>Modifier</td>
 <td>Modifier</td>
 <td>Sub-Module &amp; State</td>
 </tr>
@@ -85,7 +71,7 @@
       <div class="menu toc-menu">
         <li class="menu-item -level-0 -parent">
           <ul class="submenu">
-            <li class="menu-item -level-1"><a href="index.html" class="link title  link-index">rscss</a>
+            <li class="menu-item -level-1"><a href="index.html" class="link title  link-index">css</a>
             </li>
             <li class="menu-item -level-1 -parent"><span class="title">Components</span>
               <ul class="submenu">
@@ -93,7 +79,7 @@
                 </li>
                 <li class="menu-item -level-2"><a href="elements.html" class="link title  link-elements">Elements</a>
                 </li>
-                <li class="menu-item -level-2"><a href="variants.html" class="link title  link-variants">Variants</a>
+                <li class="menu-item -level-2"><a href="modifiers.html" class="link title  link-modifiers">Modifiers</a>
                 </li>
                 <li class="menu-item -level-2"><a href="nested-components.html" class="link title  link-nested-components">Nested components</a>
                 </li>
@@ -118,10 +104,6 @@
                 <li class="menu-item -level-2"><a href="other-resources.html" class="link title -active link-other-resources">Other resources</a>
                   <ul class="headings heading-list">
                     <li class="heading-item -depth-2"><a href="#other-solutions" class="hlink link-other-solutions">Other solutions</a>
-                      <ul class="heading-list -depth-2">
-                        <li class="heading-item -depth-3"><a href="#bem" class="hlink link-bem">BEM</a>
-                        </li>
-                      </ul>
                     </li>
                     <li class="heading-item -depth-2"><a href="#terminologies" class="hlink link-terminologies">Terminologies</a>
                     </li>

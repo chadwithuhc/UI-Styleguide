@@ -2,17 +2,10 @@
   "toc": {
     "sections": [
       {
-        "title": "rscss",
+        "title": "css",
         "source": "README.md",
         "url": "index.html",
-        "slug": "index",
-        "headings": [
-          {
-            "title": "Introduction",
-            "depth": 2,
-            "id": "introduction"
-          }
-        ]
+        "slug": "index"
       },
       {
         "title": "Components",
@@ -59,20 +52,20 @@
             ]
           },
           {
-            "title": "Variants",
-            "source": "docs/variants.md",
-            "url": "variants.html",
-            "slug": "variants",
+            "title": "Modifiers",
+            "source": "docs/modifiers.md",
+            "url": "modifiers.html",
+            "slug": "modifiers",
             "headings": [
               {
-                "title": "Naming variants",
+                "title": "Naming modifiers",
                 "depth": 2,
-                "id": "naming-variants"
+                "id": "naming-modifiers"
               },
               {
-                "title": "Element variants",
+                "title": "Element modifiers",
                 "depth": 2,
-                "id": "element-variants"
+                "id": "element-modifiers"
               },
               {
                 "title": "Dash prefixes",
@@ -88,9 +81,9 @@
             "slug": "nested-components",
             "headings": [
               {
-                "title": "Variants",
+                "title": "Modifiers",
                 "depth": 2,
-                "id": "variants"
+                "id": "modifiers"
               },
               {
                 "title": "Simplifying nested components",
@@ -180,9 +173,9 @@
             "slug": "pitfalls",
             "headings": [
               {
-                "title": "Bleeding through nested components",
+                "title": "Coming Soon...",
                 "depth": 2,
-                "id": "bleeding-through-nested-components"
+                "id": "coming-soon..."
               }
             ]
           },
@@ -201,14 +194,7 @@
               {
                 "title": "Other solutions",
                 "depth": 2,
-                "id": "other-solutions",
-                "headings": [
-                  {
-                    "title": "BEM",
-                    "depth": 3,
-                    "id": "bem"
-                  }
-                ]
+                "id": "other-solutions"
               },
               {
                 "title": "Terminologies",
@@ -230,15 +216,8 @@
   "index": {
     "index.html": {
       "source": "README.md",
-      "title": "rscss",
-      "slug": "index",
-      "headings": [
-        {
-          "title": "Introduction",
-          "depth": 2,
-          "id": "introduction"
-        }
-      ]
+      "title": "css",
+      "slug": "index"
     },
     "components.html": {
       "source": "docs/components.md",
@@ -279,20 +258,20 @@
         }
       ]
     },
-    "variants.html": {
-      "source": "docs/variants.md",
-      "title": "Variants",
-      "slug": "variants",
+    "modifiers.html": {
+      "source": "docs/modifiers.md",
+      "title": "Modifiers",
+      "slug": "modifiers",
       "headings": [
         {
-          "title": "Naming variants",
+          "title": "Naming modifiers",
           "depth": 2,
-          "id": "naming-variants"
+          "id": "naming-modifiers"
         },
         {
-          "title": "Element variants",
+          "title": "Element modifiers",
           "depth": 2,
-          "id": "element-variants"
+          "id": "element-modifiers"
         },
         {
           "title": "Dash prefixes",
@@ -307,9 +286,9 @@
       "slug": "nested-components",
       "headings": [
         {
-          "title": "Variants",
+          "title": "Modifiers",
           "depth": 2,
-          "id": "variants"
+          "id": "modifiers"
         },
         {
           "title": "Simplifying nested components",
@@ -385,9 +364,9 @@
       "slug": "pitfalls",
       "headings": [
         {
-          "title": "Bleeding through nested components",
+          "title": "Coming Soon...",
           "depth": 2,
-          "id": "bleeding-through-nested-components"
+          "id": "coming-soon..."
         }
       ]
     },
@@ -404,14 +383,7 @@
         {
           "title": "Other solutions",
           "depth": 2,
-          "id": "other-solutions",
-          "headings": [
-            {
-              "title": "BEM",
-              "depth": 3,
-              "id": "bem"
-            }
-          ]
+          "id": "other-solutions"
         },
         {
           "title": "Terminologies",
@@ -430,7 +402,7 @@
     "README.md": "index.html",
     "docs/components.md": "components.html",
     "docs/elements.md": "elements.html",
-    "docs/variants.md": "variants.html",
+    "docs/modifiers.md": "modifiers.html",
     "docs/nested-components.md": "nested-components.html",
     "docs/layouts.md": "layouts.html",
     "docs/helpers.md": "helpers.html",

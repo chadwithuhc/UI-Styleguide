@@ -1,7 +1,7 @@
 {
-  "github": "rstacruz/rscss",
+  "github": "bythepixel/css",
   "css": [
-    "http://ricostacruz.com/docpress-rsc/style.css"
+    "http://bythepixel.com/docpress-rsc/style.css"
   ],
   "markdown": {
     "plugins": {
@@ -9,7 +9,7 @@
     }
   },
   "googleAnalytics": {
-    "id": "UA-70062028-1",
-    "domain": "rscss.io"
+    "id": "UA-XXX",
+    "domain": "styleguide.bythepixel.com"
   }
 }

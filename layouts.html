@@ -3,14 +3,14 @@
   <head>
     <meta charset="utf-8">
     <link rel="stylesheet" href="assets/style.css?t=34b91bfb">
-    <link rel="stylesheet" href="http://ricostacruz.com/docpress-rsc/style.css">
+    <link rel="stylesheet" href="http://bythepixel.com/docpress-rsc/style.css">
     <script src="assets/script.js?t=4a85ba64"></script>
     <title>Layouts</title>
     <meta name="viewport" content="width=device-width">
     <script>
-      if (false || window.location.hostname.indexOf("rscss.io") === window.location.hostname.length - 8) {
+      if (false || window.location.hostname.indexOf("styleguide.bythepixel.com") === window.location.hostname.length - 25) {
         (function(d,o,c,p,r,e,s){d['GoogleAnalyticsObject']=r;d[r]=d[r]||function(){(d[r].q=d[r].q||[]).push(arguments)},d[r].l=1*new Date();e=o.createElement(c),s=o.getElementsByTagName(c)[0];e.async=1;e.src=p;s.parentNode.insertBefore(e,s)})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-        ga('create',"UA-70062028-1",'auto')
+        ga('create',"UA-XXX",'auto')
       }
     </script>
   </head>
@@ -19,40 +19,41 @@
       <div class="toggle menu-toggle js-menu-toggle"></div>
       <div class="body page-layouts">
         <div class="header-nav">
-          <div class="right"><a href="https://github.com/rstacruz/rscss" data-title="rstacruz/rscss" class="iconlink">
+          <div class="right"><a href="https://github.com/bythepixel/css" data-title="bythepixel/css" class="iconlink">
               <!-- span.title Open in GitHub--><span class="icon -github"></span></a>
           </div>
         </div>
         <div class="markdown-body"><h1 id="layouts">Layouts</h1>
 <p><img src="images/layouts.png" alt=""></p>
 <h2 id="avoid-positioning-properties">Avoid positioning properties</h2>
-<p>Components should be made in a way that they&apos;re reusable in different contexts. Avoid putting these properties in components:</p>
+<p>Components should be made in a way that they&apos;re reusable in different containers. Avoid putting these properties in components:</p>
 <ul>
 <li>Positioning (<code>position</code>, <code>top</code>, <code>left</code>, <code>right</code>, <code>bottom</code>)</li>
 <li>Floats (<code>float</code>, <code>clear</code>)</li>
 <li>Margins (<code>margin</code>)</li>
 <li>Dimensions (<code>width</code>, <code>height</code>) *</li>
 </ul>
+<p>We will apply custom positioning, sizing, etc. on the layout components.</p>
 <h2 id="fixed-dimensions">Fixed dimensions</h2>
-<p>Exception to these would be elements that have fixed width/heights, such as avatars and logos.</p>
+<p>Exception to these would be elements that have fixed width/heights, such as <strong>avatars</strong> and <strong>logos</strong>.</p>
 <h2 id="define-positioning-in-parents">Define positioning in parents</h2>
 <p>If you need to define these, try to define them in whatever context they will be in. In this example below, notice that the widths and floats are applied on the <em>list</em> component, not the component itself.</p>
-<pre><code class="lang-css">.article-list {
+<pre><code class="lang-scss"><span class="hljs-class">.article-list</span> {
   &amp; {
-    @include clearfix;
+    <span class="hljs-at_rule">@<span class="pl-k">include</span><span class="hljs-preprocessor"> clearfix</span>;</span>
   }
 
-  &gt; .article-card {
-    width: 33.3%;
-    float: left;
+  <span class="hljs-class">.article-card</span> {
+    <span class="pl-e">width</span><span class="pl-s">: <span class="hljs-number">33.3%</span>;</span>
+    <span class="pl-e">float</span><span class="pl-s">: left;</span>
   }
 }
 
-.article-card {
-  &amp; { /* ... */ }
-  &gt; .image { /* ... */ }
-  &gt; .title { /* ... */ }
-  &gt; .category { /* ... */ }
+<span class="hljs-class">.article-card</span> {
+  &amp; { <span class="pl-c">/* ... */</span> }
+  &amp;__image { <span class="pl-c">/* ... */</span> }
+  &amp;__title { <span class="pl-c">/* ... */</span> }
+  &amp;__category { <span class="pl-c">/* ... */</span> }
 }
 </code></pre>
 <p class="pull-box">How do you apply margins outside a layout? Try it with Helpers.
@@ -67,7 +68,7 @@
       <div class="menu toc-menu">
         <li class="menu-item -level-0 -parent">
           <ul class="submenu">
-            <li class="menu-item -level-1"><a href="index.html" class="link title  link-index">rscss</a>
+            <li class="menu-item -level-1"><a href="index.html" class="link title  link-index">css</a>
             </li>
             <li class="menu-item -level-1 -parent"><span class="title">Components</span>
               <ul class="submenu">
@@ -75,7 +76,7 @@
                 </li>
                 <li class="menu-item -level-2"><a href="elements.html" class="link title  link-elements">Elements</a>
                 </li>
-                <li class="menu-item -level-2"><a href="variants.html" class="link title  link-variants">Variants</a>
+                <li class="menu-item -level-2"><a href="modifiers.html" class="link title  link-modifiers">Modifiers</a>
                 </li>
                 <li class="menu-item -level-2"><a href="nested-components.html" class="link title  link-nested-components">Nested components</a>
                 </li>

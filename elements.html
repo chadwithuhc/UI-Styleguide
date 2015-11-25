@@ -3,14 +3,14 @@
   <head>
     <meta charset="utf-8">
     <link rel="stylesheet" href="assets/style.css?t=34b91bfb">
-    <link rel="stylesheet" href="http://ricostacruz.com/docpress-rsc/style.css">
+    <link rel="stylesheet" href="http://bythepixel.com/docpress-rsc/style.css">
     <script src="assets/script.js?t=4a85ba64"></script>
     <title>Elements</title>
     <meta name="viewport" content="width=device-width">
     <script>
-      if (false || window.location.hostname.indexOf("rscss.io") === window.location.hostname.length - 8) {
+      if (false || window.location.hostname.indexOf("styleguide.bythepixel.com") === window.location.hostname.length - 25) {
         (function(d,o,c,p,r,e,s){d['GoogleAnalyticsObject']=r;d[r]=d[r]||function(){(d[r].q=d[r].q||[]).push(arguments)},d[r].l=1*new Date();e=o.createElement(c),s=o.getElementsByTagName(c)[0];e.async=1;e.src=p;s.parentNode.insertBefore(e,s)})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-        ga('create',"UA-70062028-1",'auto')
+        ga('create',"UA-XXX",'auto')
       }
     </script>
   </head>
@@ -19,7 +19,7 @@
       <div class="toggle menu-toggle js-menu-toggle"></div>
       <div class="body page-elements">
         <div class="header-nav">
-          <div class="right"><a href="https://github.com/rstacruz/rscss" data-title="rstacruz/rscss" class="iconlink">
+          <div class="right"><a href="https://github.com/bythepixel/css" data-title="bythepixel/css" class="iconlink">
               <!-- span.title Open in GitHub--><span class="icon -github"></span></a>
           </div>
         </div>
@@ -29,45 +29,46 @@
 <h2 id="naming-elements">Naming elements</h2>
 <p>Each component may have elements. They should have classes that are only <strong>one word</strong>.</p>
 <pre><code class="lang-scss"><span class="hljs-class">.search-form</span> {
-  &gt; <span class="hljs-class">.field</span> { <span class="pl-c">/* ... */</span> }
-  &gt; <span class="hljs-class">.action</span> { <span class="pl-c">/* ... */</span> }
+  &amp;__field { <span class="pl-c">/* ... */</span> }
+  &amp;__action { <span class="pl-c">/* ... */</span> }
 }
 </code></pre>
 <h2 id="element-selectors">Element selectors</h2>
-<p>Prefer to use the <code>&gt;</code> child selector whenever possible. This prevents bleeding through nested components, and performs better than descendant selectors.</p>
+<p>We prefer not to nest classnames unless you are nesting modules. We also do not use child selectors because of refactoring issues.</p>
 <pre><code class="lang-scss"><span class="hljs-class">.article-card</span> {
-  <span class="hljs-class">.title</span>     { <span class="pl-c">/* okay */</span> }
-  &gt; <span class="hljs-class">.author</span>  { <span class="pl-c">/* &#x2713; better */</span> }
+  <span class="hljs-class">.title</span>     { <span class="pl-c">/* &#x2717; avoid */</span> }
+  &amp;__title { <span class="pl-c">/* &#x2713; better */</span> }
+  &gt; <span class="hljs-class">.author</span>  { <span class="pl-c">/* &#x2717; avoid */</span> }
 }
 </code></pre>
 <h2 id="on-multiple-words">On multiple words</h2>
-<p>For those that need two or more words, concatenate them without dashes or underscores.</p>
+<p>For those that need two or more words, concatenate them with dashes.</p>
 <pre><code class="lang-scss"><span class="hljs-class">.profile-box</span> {
-  &gt; <span class="hljs-class">.firstname</span> { <span class="pl-c">/* ... */</span> }
-  &gt; <span class="hljs-class">.lastname</span> { <span class="pl-c">/* ... */</span> }
-  &gt; <span class="hljs-class">.avatar</span> { <span class="pl-c">/* ... */</span> }
+  &amp;__first-name { <span class="pl-c">/* ... */</span> }
+  &amp;__last-name { <span class="pl-c">/* ... */</span> }
+  &amp;__avatar { <span class="pl-c">/* ... */</span> }
 }
 </code></pre>
 <h2 id="avoid-tag-selectors">Avoid tag selectors</h2>
-<p>Use classnames whenever possible. Tag selectors are fine, but they may come at a small performance penalty and may not be as descriptive.</p>
+<p>Use classnames whenever possible. Tag selectors are only acceptable when styling WYSIWYG output.</p>
 <pre><code class="lang-scss"><span class="hljs-class">.article-card</span> {
   &gt; <span class="hljs-tag">h3</span>    { <span class="pl-c">/* &#x2717; avoid */</span> }
-  &gt; <span class="hljs-class">.name</span> { <span class="pl-c">/* &#x2713; better */</span> }
+  &amp;__name { <span class="pl-c">/* &#x2713; better */</span> }
 }
 </code></pre>
-<p class="pull-box">Not all elements should always look the same. Variants can help.
-<a href="variants.html">Continue &#x2192;</a></p>
+<p class="pull-box">Not all elements should always look the same. Modifiers can help.
+<a href="modifiers.html">Continue &#x2192;</a></p>
 
         </div>
         <div class="footer-nav">
           <div class="left"><a href="components.html"><span class="title">About components</span></a></div>
-          <div class="right"><a href="variants.html"><span class="label">Next: </span><span class="title">Variants</span></a></div>
+          <div class="right"><a href="modifiers.html"><span class="label">Next: </span><span class="title">Modifiers</span></a></div>
         </div>
       </div>
       <div class="menu toc-menu">
         <li class="menu-item -level-0 -parent">
           <ul class="submenu">
-            <li class="menu-item -level-1"><a href="index.html" class="link title  link-index">rscss</a>
+            <li class="menu-item -level-1"><a href="index.html" class="link title  link-index">css</a>
             </li>
             <li class="menu-item -level-1 -parent"><span class="title">Components</span>
               <ul class="submenu">
@@ -85,7 +86,7 @@
                     </li>
                   </ul>
                 </li>
-                <li class="menu-item -level-2"><a href="variants.html" class="link title  link-variants">Variants</a>
+                <li class="menu-item -level-2"><a href="modifiers.html" class="link title  link-modifiers">Modifiers</a>
                 </li>
                 <li class="menu-item -level-2"><a href="nested-components.html" class="link title  link-nested-components">Nested components</a>
                 </li>

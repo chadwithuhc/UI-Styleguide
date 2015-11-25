@@ -5,7 +5,7 @@
     <link rel="stylesheet" href="assets/style.css?t=34b91bfb">
     <link rel="stylesheet" href="http://bythepixel.com/docpress-rsc/style.css">
     <script src="assets/script.js?t=4a85ba64"></script>
-    <title>Apprehensions</title>
+    <title>Modifiers</title>
     <meta name="viewport" content="width=device-width">
     <script>
       if (false || window.location.hostname.indexOf("styleguide.bythepixel.com") === window.location.hostname.length - 25) {
@@ -17,35 +17,45 @@
   <body class="-menu-visible">
     <div class="doc-layout">
       <div class="toggle menu-toggle js-menu-toggle"></div>
-      <div class="body page-apprehensions">
+      <div class="body page-modifiers">
         <div class="header-nav">
           <div class="right"><a href="https://github.com/bythepixel/css" data-title="bythepixel/css" class="iconlink">
               <!-- span.title Open in GitHub--><span class="icon -github"></span></a>
           </div>
         </div>
-        <div class="markdown-body"><h1 id="apprehensions">Apprehensions</h1>
-<p>Some people may have apprehensions to these conventions, such as:</p>
-<h4 id="&quot;but-dashes-suck&quot;">&quot;But dashes suck&quot;</h4>
-<p>You&apos;re free to omit them and just use regular words, but keep the rest of the ideas in place (components, elements, modifiers).</p>
-<h4 id="&quot;but-i-can&apos;t-think-of-2-words!&quot;">&quot;But I can&apos;t think of 2 words!&quot;</h4>
-<p>Some components will only need one word to express their purpose, such as <code>alert</code>. In these cases, consider that using some suffixes will make it clearer that it&apos;s a block-level element:</p>
+        <div class="markdown-body"><h1 id="modifiers">Modifiers</h1>
+<p>Components may have modifiers. Elements may have modifiers, too.</p>
+<p><img src="images/component-modifiers.png" alt=""></p>
+<br>
+<h2 id="naming-modifiers">Naming modifiers</h2>
+<p>Classnames for modifiers will be prefixed by two dashes (<code>--</code>).</p>
+<pre><code class="lang-scss"><span class="hljs-class">.like-button</span> {
+  &amp;--wide { <span class="pl-c">/* ... */</span> }
+  &amp;--short { <span class="pl-c">/* ... */</span> }
+  &amp;--<span class="pl-s">disabled</span> { <span class="pl-c">/* ... */</span> }
+}
+</code></pre>
+<h2 id="element-modifiers">Element modifiers</h2>
+<p>Elements may also have modifiers.</p>
+<pre><code class="lang-scss"><span class="hljs-class">.shopping-card</span> {
+  &amp;__title { <span class="pl-c">/* ... */</span> }
+  &amp;__title--<span class="hljs-tag">small</span> { <span class="pl-c">/* ... */</span> }
+}
+</code></pre>
+<h2 id="dash-prefixes">Dash prefixes</h2>
+<p>Dashes are the preferred prefix for modifiers.</p>
 <ul>
-<li><code>.alert-box</code></li>
-<li><code>.alert-card</code></li>
-<li><code>.alert-block</code></li>
-<li><code>.alert-component</code></li>
+<li>It prevents ambiguity with elements.</li>
+<li>A CSS class can only start with a letter, <code>_</code> or <code>-</code>.</li>
+<li>Dashes are easier to type than underscores.</li>
 </ul>
-<p>Or for inlines:</p>
-<ul>
-<li><code>.link-button</code></li>
-<li><code>.link-inline</code></li>
-<li><code>.link-label</code></li>
-</ul>
+<p class="pull-box">How do you deal with complex elements? Nest them.
+<a href="nested-components.html">Continue &#x2192;</a></p>
 
         </div>
         <div class="footer-nav">
-          <div class="left"><a href="pitfalls.html"><span class="title">Pitfalls</span></a></div>
-          <div class="right"><a href="other-resources.html"><span class="label">Next: </span><span class="title">Other resources</span></a></div>
+          <div class="left"><a href="elements.html"><span class="title">Elements</span></a></div>
+          <div class="right"><a href="nested-components.html"><span class="label">Next: </span><span class="title">Nested components</span></a></div>
         </div>
       </div>
       <div class="menu toc-menu">
@@ -59,7 +69,15 @@
                 </li>
                 <li class="menu-item -level-2"><a href="elements.html" class="link title  link-elements">Elements</a>
                 </li>
-                <li class="menu-item -level-2"><a href="modifiers.html" class="link title  link-modifiers">Modifiers</a>
+                <li class="menu-item -level-2"><a href="modifiers.html" class="link title -active link-modifiers">Modifiers</a>
+                  <ul class="headings heading-list">
+                    <li class="heading-item -depth-2"><a href="#naming-modifiers" class="hlink link-naming-modifiers">Naming modifiers</a>
+                    </li>
+                    <li class="heading-item -depth-2"><a href="#element-modifiers" class="hlink link-element-modifiers">Element modifiers</a>
+                    </li>
+                    <li class="heading-item -depth-2"><a href="#dash-prefixes" class="hlink link-dash-prefixes">Dash prefixes</a>
+                    </li>
+                  </ul>
                 </li>
                 <li class="menu-item -level-2"><a href="nested-components.html" class="link title  link-nested-components">Nested components</a>
                 </li>
@@ -79,7 +97,7 @@
               <ul class="submenu">
                 <li class="menu-item -level-2"><a href="pitfalls.html" class="link title  link-pitfalls">Pitfalls</a>
                 </li>
-                <li class="menu-item -level-2"><a href="apprehensions.html" class="link title -active link-apprehensions">Apprehensions</a>
+                <li class="menu-item -level-2"><a href="apprehensions.html" class="link title  link-apprehensions">Apprehensions</a>
                 </li>
                 <li class="menu-item -level-2"><a href="other-resources.html" class="link title  link-other-resources">Other resources</a>
                 </li>

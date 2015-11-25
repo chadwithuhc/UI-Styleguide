@@ -3,14 +3,14 @@
   <head>
     <meta charset="utf-8">
     <link rel="stylesheet" href="assets/style.css?t=34b91bfb">
-    <link rel="stylesheet" href="http://ricostacruz.com/docpress-rsc/style.css">
+    <link rel="stylesheet" href="http://bythepixel.com/docpress-rsc/style.css">
     <script src="assets/script.js?t=4a85ba64"></script>
     <title>Helpers</title>
     <meta name="viewport" content="width=device-width">
     <script>
-      if (false || window.location.hostname.indexOf("rscss.io") === window.location.hostname.length - 8) {
+      if (false || window.location.hostname.indexOf("styleguide.bythepixel.com") === window.location.hostname.length - 25) {
         (function(d,o,c,p,r,e,s){d['GoogleAnalyticsObject']=r;d[r]=d[r]||function(){(d[r].q=d[r].q||[]).push(arguments)},d[r].l=1*new Date();e=o.createElement(c),s=o.getElementsByTagName(c)[0];e.async=1;e.src=p;s.parentNode.insertBefore(e,s)})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-        ga('create',"UA-70062028-1",'auto')
+        ga('create',"UA-XXX",'auto')
       }
     </script>
   </head>
@@ -19,20 +19,20 @@
       <div class="toggle menu-toggle js-menu-toggle"></div>
       <div class="body page-helpers">
         <div class="header-nav">
-          <div class="right"><a href="https://github.com/rstacruz/rscss" data-title="rstacruz/rscss" class="iconlink">
+          <div class="right"><a href="https://github.com/bythepixel/css" data-title="bythepixel/css" class="iconlink">
               <!-- span.title Open in GitHub--><span class="icon -github"></span></a>
           </div>
         </div>
         <div class="markdown-body"><h1 id="helpers">Helpers</h1>
 <p>For general-purpose classes meant to override values, put them in a separate file and name them beginning with an underscore. They are typically things that are tagged with <em>!important</em>. Use them <em>very</em> sparingly.</p>
-<pre><code class="lang-css"><span class="hljs-class">._unmargin</span> <span class="hljs-rules">{ <span class="hljs-rule"><span class="pl-e">margin</span>:<span class="pl-s"> <span class="hljs-number">0</span> <span class="hljs-important">!important</span></span></span>; }</span>
+<pre><code class="lang-css"><span class="hljs-class">._nomargin</span> <span class="hljs-rules">{ <span class="hljs-rule"><span class="pl-e">margin</span>:<span class="pl-s"> <span class="hljs-number">0</span> <span class="hljs-important">!important</span></span></span>; }</span>
 <span class="hljs-class">._center</span> <span class="hljs-rules">{ <span class="hljs-rule"><span class="pl-e">text-align</span>:<span class="pl-s"> center <span class="hljs-important">!important</span></span></span>; }</span>
 <span class="hljs-class">._pull-left</span> <span class="hljs-rules">{ <span class="hljs-rule"><span class="pl-e">float</span>:<span class="pl-s"> left <span class="hljs-important">!important</span></span></span>; }</span>
 <span class="hljs-class">._pull-right</span> <span class="hljs-rules">{ <span class="hljs-rule"><span class="pl-e">float</span>:<span class="pl-s"> right <span class="hljs-important">!important</span></span></span>; }</span>
 </code></pre>
 <h2 id="naming-helpers">Naming helpers</h2>
 <p>Prefix classnames with an underscore. This will make it easy to differentiate them from modifiers defined in the component. Underscores also look a bit ugly which is an intentional side effect: using too many helpers should be discouraged.</p>
-<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="pl-ent">div</span> <span class="pl-e">class</span>=<span class="pl-s">&apos;order-graphs -slim _unmargin&apos;</span>&gt;</span>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="pl-ent">div</span> <span class="pl-e">class</span>=<span class="pl-s">&quot;order-graphs _unmargin&quot;</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="pl-ent">div</span>&gt;</span>
 </code></pre>
 <h2 id="organizing-helpers">Organizing helpers</h2>
@@ -47,7 +47,7 @@
       <div class="menu toc-menu">
         <li class="menu-item -level-0 -parent">
           <ul class="submenu">
-            <li class="menu-item -level-1"><a href="index.html" class="link title  link-index">rscss</a>
+            <li class="menu-item -level-1"><a href="index.html" class="link title  link-index">css</a>
             </li>
             <li class="menu-item -level-1 -parent"><span class="title">Components</span>
               <ul class="submenu">
@@ -55,7 +55,7 @@
                 </li>
                 <li class="menu-item -level-2"><a href="elements.html" class="link title  link-elements">Elements</a>
                 </li>
-                <li class="menu-item -level-2"><a href="variants.html" class="link title  link-variants">Variants</a>
+                <li class="menu-item -level-2"><a href="modifiers.html" class="link title  link-modifiers">Modifiers</a>
                 </li>
                 <li class="menu-item -level-2"><a href="nested-components.html" class="link title  link-nested-components">Nested components</a>
                 </li>
