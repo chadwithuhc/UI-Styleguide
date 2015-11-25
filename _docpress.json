@@ -2,7 +2,7 @@
   "toc": {
     "sections": [
       {
-        "title": "css",
+        "title": "CSS Style Guide",
         "source": "README.md",
         "url": "index.html",
         "slug": "index"
@@ -192,9 +192,9 @@
             "slug": "other-resources",
             "headings": [
               {
-                "title": "Other solutions",
+                "title": "Coming from other solutions",
                 "depth": 2,
-                "id": "other-solutions"
+                "id": "coming-from-other-solutions"
               },
               {
                 "title": "Terminologies",
@@ -216,7 +216,7 @@
   "index": {
     "index.html": {
       "source": "README.md",
-      "title": "css",
+      "title": "CSS Style Guide",
       "slug": "index"
     },
     "components.html": {
@@ -381,9 +381,9 @@
       "slug": "other-resources",
       "headings": [
         {
-          "title": "Other solutions",
+          "title": "Coming from other solutions",
           "depth": 2,
-          "id": "other-solutions"
+          "id": "coming-from-other-solutions"
         },
         {
           "title": "Terminologies",
