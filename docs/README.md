@@ -9,7 +9,7 @@
   - [Layouts](layouts.md)
   - [Helpers](helpers.md)
 - **Structure**
-  - [CSS Structure](css-structure.md)
+  - [Component File Structure](component-file-structure.md)
 - **Notes**
   - [Pitfalls](pitfalls.md)
   - [Apprehensions](apprehensions.md)
