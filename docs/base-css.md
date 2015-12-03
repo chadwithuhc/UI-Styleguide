@@ -33,13 +33,6 @@ footer, header, hgroup, menu, nav, section {
 
 ul {
     list-style:none;
-    margin:0;
-    padding:0;
-}
-
-li {
-    margin:0;
-    padding:0;
 }
 
 blockquote, q {
