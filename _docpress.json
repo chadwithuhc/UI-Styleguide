@@ -139,25 +139,30 @@
         "title": "Structure",
         "sections": [
           {
-            "title": "CSS Structure",
-            "source": "docs/css-structure.md",
-            "url": "css-structure.html",
-            "slug": "css-structure",
+            "title": "Component File Structure",
+            "source": "docs/component-file-structure.md",
+            "url": "component-file-structure.html",
+            "slug": "component-file-structure",
             "headings": [
               {
-                "title": "One component per file",
+                "title": "Basic Rules",
                 "depth": 2,
-                "id": "one-component-per-file"
+                "id": "basic-rules"
               },
               {
-                "title": "Use glob matching",
+                "title": "CSS",
                 "depth": 2,
-                "id": "use-glob-matching"
+                "id": "css"
               },
               {
-                "title": "Avoid over-nesting",
+                "title": "JS",
                 "depth": 2,
-                "id": "avoid-over-nesting"
+                "id": "js"
+              },
+              {
+                "title": "HTML",
+                "depth": 2,
+                "id": "html"
               }
             ]
           }
@@ -336,25 +341,30 @@
         }
       ]
     },
-    "css-structure.html": {
-      "source": "docs/css-structure.md",
-      "title": "CSS Structure",
-      "slug": "css-structure",
+    "component-file-structure.html": {
+      "source": "docs/component-file-structure.md",
+      "title": "Component File Structure",
+      "slug": "component-file-structure",
       "headings": [
         {
-          "title": "One component per file",
+          "title": "Basic Rules",
           "depth": 2,
-          "id": "one-component-per-file"
+          "id": "basic-rules"
         },
         {
-          "title": "Use glob matching",
+          "title": "CSS",
           "depth": 2,
-          "id": "use-glob-matching"
+          "id": "css"
         },
         {
-          "title": "Avoid over-nesting",
+          "title": "JS",
           "depth": 2,
-          "id": "avoid-over-nesting"
+          "id": "js"
+        },
+        {
+          "title": "HTML",
+          "depth": 2,
+          "id": "html"
         }
       ]
     },
@@ -406,14 +416,14 @@
     "docs/nested-components.md": "nested-components.html",
     "docs/layouts.md": "layouts.html",
     "docs/helpers.md": "helpers.html",
-    "docs/css-structure.md": "css-structure.html",
+    "docs/component-file-structure.md": "component-file-structure.html",
     "docs/pitfalls.md": "pitfalls.html",
     "docs/apprehensions.md": "apprehensions.html",
     "docs/other-resources.md": "other-resources.html",
     "docs/summary.md": "summary.html",
     "docs/docpress.json": "docpress.json",
-    "docs/images/component-elements.png": "images/component-elements.png",
     "docs/images/component-example.png": "images/component-example.png",
+    "docs/images/component-elements.png": "images/component-elements.png",
     "docs/images/component-modifiers.png": "images/component-modifiers.png",
     "docs/images/component-nesting.png": "images/component-nesting.png",
     "docs/images/layouts.png": "images/layouts.png"

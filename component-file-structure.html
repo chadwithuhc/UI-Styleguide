@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="assets/style.css?t=34b91bfb">
+    <script src="assets/script.js?t=4a85ba64"></script>
+    <title>Component File Structure</title>
+    <meta name="viewport" content="width=device-width">
+    <script>
+      if (false || window.location.hostname.indexOf("styleguide.bythepixel.com") === window.location.hostname.length - 25) {
+        (function(d,o,c,p,r,e,s){d['GoogleAnalyticsObject']=r;d[r]=d[r]||function(){(d[r].q=d[r].q||[]).push(arguments)},d[r].l=1*new Date();e=o.createElement(c),s=o.getElementsByTagName(c)[0];e.async=1;e.src=p;s.parentNode.insertBefore(e,s)})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+        ga('create',"UA-XXX",'auto')
+      }
+    </script>
+  </head>
+  <body class="-menu-visible">
+    <div class="doc-layout">
+      <div class="toggle menu-toggle js-menu-toggle"></div>
+      <div class="body page-component-file-structure">
+        <div class="header-nav">
+          <div class="right"><a href="https://github.com/bythepixel/css" data-title="bythepixel/css" class="iconlink">
+              <!-- span.title Open in GitHub--><span class="icon -github"></span></a>
+          </div>
+        </div>
+        <div class="markdown-body"><h1 id="component-file-structure">Component File Structure</h1>
+<p>Components should be stored under a single components folder. This rule is true for all HTML, CSS, and JS files, in their respective folders. Different naming conventions apply based on file type.</p>
+<h2 id="basic-rules">Basic Rules</h2>
+<p>Before we get into each file type, let&apos;s talk basic rules.</p>
+<p><strong>&#x2713; Each component has its own file</strong><br>
+We allow only one component per file. Modifiers are still considered part of one component.</p>
+<pre><code class="lang-scss"><span class="pl-c">// Block</span>
+<span class="hljs-class">.media-block</span> {
+
+  <span class="pl-c">// Elements</span>
+  &amp;__title { <span class="pl-c">/* ... */</span> }
+  &amp;__body { <span class="pl-c">/* ... */</span> }
+  &amp;__image { <span class="pl-c">/* ... */</span> }
+
+  <span class="pl-c">// Modifiers</span>
+  &amp;--card { <span class="pl-c">/* ... */</span> }
+  &amp;--<span class="pl-s">horizontal</span> {
+  
+      <span class="pl-c">// Modifier overrides</span>
+      <span class="hljs-class">.media-block__body</span> { <span class="pl-c">/* ... */</span> }
+  
+  }
+}
+</code></pre>
+<p><strong>&#x2713; Avoid over-nesting</strong><br>
+Since we want to be able to move elements around without requiring too much refactoring, a two-level nesting solution works best. More levels implies multiple nested elements.</p>
+<pre><code class="lang-scss"><span class="pl-c">/* &#x2713; Better: 2 levels */</span>
+<span class="hljs-class">.image-frame</span> {
+  &amp;__description { <span class="pl-c">/* ... */</span> }
+  &amp;__icon { <span class="pl-c">/* ... */</span> }
+}
+  
+<span class="pl-c">/* &#x2717; Avoid: 3 levels of nesting */</span>
+<span class="hljs-class">.image-frame</span> {
+  &amp;__description {
+    &amp;__icon {
+      <span class="pl-c">/* ... */</span>
+    }
+  }
+}
+</code></pre>
+<p><strong>&#x2713; Site specific components get their own folder</strong><br>
+Site specific components are defined as code that would not be reused on another site. For example, a component that is a locations list, directly calling the Locations model since it is on every page. Other examples could be reusable footers, disclaimer blocks, etc.</p>
+<pre><code>// Site: Acme Corp
+components/acme/_locations_list.scss
+components/acme/_footer.scss
+components/acme/_disclaimer.scss
+</code></pre>
+<p><strong>&#x2713; Third-party specific components get their own folder</strong><br>
+Third-party component overrides should be included in a subfolder. A great example is MagnificPopup which has it&apos;s own styling, but we often create custom instances that need to be reused.</p>
+<pre><code>// Third-party Module: MagnificPopup
+components/mfp/_infographic.scss
+components/mfp/_slideshow.scss
+</code></pre>
+<h2 id="css">CSS</h2>
+<p><em>SCSS</em> files start with underscores. Dashes are ok if allowed.</p>
+<pre><code>css/components/*
+    _media_block.scss
+    _boxed_container.scss
+</code></pre>
+<p>Importing:</p>
+<pre><code class="lang-scss"><span class="pl-c">/* Subfolder globbing */</span>
+<span class="hljs-at_rule">@<span class="pl-k">import</span> <span class="pl-s">&apos;components/**/*&apos;</span>;</span>
+
+<span class="pl-c">/* Fallback: Including each folder */</span>
+<span class="hljs-at_rule">@<span class="pl-k">import</span> <span class="pl-s">&apos;components/*&apos;</span>;</span>
+<span class="hljs-at_rule">@<span class="pl-k">import</span> <span class="pl-s">&apos;components/mfp/*&apos;</span>;</span>
+</code></pre>
+<h2 id="js">JS</h2>
+<p>Normal file naming. A file is not required if it&apos;s empty.</p>
+<pre><code>js/components/*
+    media_block.js
+    block_container.js
+</code></pre>
+<p>Importing:</p>
+<pre><code class="lang-ruby"><span class="pl-c"># Rails Asset Pipeline</span>
+/<span class="hljs-regexp">/= require_tree ./components</span>
+</code></pre>
+<h2 id="html">HTML</h2>
+<p>The idea of separating the views is passing in pure data so we can include as partials.</p>
+<pre><code>views/components/*
+    media_block.html
+    block_container.html
+</code></pre>
+<p>Usage:</p>
+<pre><code class="lang-ruby">&lt;%= render <span class="pl-s">&quot;components/badge&quot;</span>, <span class="hljs-symbol">icon:</span> <span class="pl-s">&quot;camera&quot;</span>, <span class="hljs-symbol">text:</span> <span class="pl-s">&quot;<span class="hljs-subst">#{photos.size}</span>  View All&quot;</span> %&gt;
+</code></pre>
+
+        </div>
+        <div class="footer-nav">
+          <div class="left"><a href="helpers.html"><span class="title">Helpers</span></a></div>
+          <div class="right"><a href="pitfalls.html"><span class="label">Next: </span><span class="title">Pitfalls</span></a></div>
+        </div>
+      </div>
+      <div class="menu toc-menu">
+        <li class="menu-item -level-0 -parent">
+          <ul class="submenu">
+            <li class="menu-item -level-1"><a href="index.html" class="link title  link-index">CSS Style Guide</a>
+            </li>
+            <li class="menu-item -level-1 -parent"><span class="title">Components</span>
+              <ul class="submenu">
+                <li class="menu-item -level-2"><a href="components.html" class="link title  link-components">About components</a>
+                </li>
+                <li class="menu-item -level-2"><a href="elements.html" class="link title  link-elements">Elements</a>
+                </li>
+                <li class="menu-item -level-2"><a href="modifiers.html" class="link title  link-modifiers">Modifiers</a>
+                </li>
+                <li class="menu-item -level-2"><a href="nested-components.html" class="link title  link-nested-components">Nested components</a>
+                </li>
+                <li class="menu-item -level-2"><a href="layouts.html" class="link title  link-layouts">Layouts</a>
+                </li>
+                <li class="menu-item -level-2"><a href="helpers.html" class="link title  link-helpers">Helpers</a>
+                </li>
+              </ul>
+            </li>
+            <li class="menu-item -level-1 -parent"><span class="title">Structure</span>
+              <ul class="submenu">
+                <li class="menu-item -level-2"><a href="component-file-structure.html" class="link title -active link-component-file-structure">Component File Structure</a>
+                  <ul class="headings heading-list">
+                    <li class="heading-item -depth-2"><a href="#basic-rules" class="hlink link-basic-rules">Basic Rules</a>
+                    </li>
+                    <li class="heading-item -depth-2"><a href="#css" class="hlink link-css">CSS</a>
+                    </li>
+                    <li class="heading-item -depth-2"><a href="#js" class="hlink link-js">JS</a>
+                    </li>
+                    <li class="heading-item -depth-2"><a href="#html" class="hlink link-html">HTML</a>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+            <li class="menu-item -level-1 -parent"><span class="title">Notes</span>
+              <ul class="submenu">
+                <li class="menu-item -level-2"><a href="pitfalls.html" class="link title  link-pitfalls">Pitfalls</a>
+                </li>
+                <li class="menu-item -level-2"><a href="apprehensions.html" class="link title  link-apprehensions">Apprehensions</a>
+                </li>
+                <li class="menu-item -level-2"><a href="other-resources.html" class="link title  link-other-resources">Other resources</a>
+                </li>
+              </ul>
+            </li>
+            <li class="menu-item -level-1"><a href="summary.html" class="link title  link-summary">Summary</a>
+            </li>
+          </ul>
+        </li>
+      </div>
+    </div>
+  </body>
+</html>
