@@ -165,6 +165,19 @@
                 "id": "html"
               }
             ]
+          },
+          {
+            "title": "Base CSS",
+            "source": "docs/base-css.md",
+            "url": "base-css.html",
+            "slug": "base-css",
+            "headings": [
+              {
+                "title": "Benefits & Changes",
+                "depth": 2,
+                "id": "benefits-and-changes"
+              }
+            ]
           }
         ]
       },
@@ -368,6 +381,18 @@
         }
       ]
     },
+    "base-css.html": {
+      "source": "docs/base-css.md",
+      "title": "Base CSS",
+      "slug": "base-css",
+      "headings": [
+        {
+          "title": "Benefits & Changes",
+          "depth": 2,
+          "id": "benefits-and-changes"
+        }
+      ]
+    },
     "pitfalls.html": {
       "source": "docs/pitfalls.md",
       "title": "Pitfalls",
@@ -417,14 +442,15 @@
     "docs/layouts.md": "layouts.html",
     "docs/helpers.md": "helpers.html",
     "docs/component-file-structure.md": "component-file-structure.html",
+    "docs/base-css.md": "base-css.html",
     "docs/pitfalls.md": "pitfalls.html",
     "docs/apprehensions.md": "apprehensions.html",
     "docs/other-resources.md": "other-resources.html",
     "docs/summary.md": "summary.html",
     "docs/docpress.json": "docpress.json",
-    "docs/images/component-example.png": "images/component-example.png",
     "docs/images/component-elements.png": "images/component-elements.png",
     "docs/images/component-modifiers.png": "images/component-modifiers.png",
+    "docs/images/component-example.png": "images/component-example.png",
     "docs/images/component-nesting.png": "images/component-nesting.png",
     "docs/images/layouts.png": "images/layouts.png"
   }
