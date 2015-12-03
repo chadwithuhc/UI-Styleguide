@@ -10,6 +10,7 @@
   - [Helpers](helpers.md)
 - **Structure**
   - [Component File Structure](component-file-structure.md)
+  - [Base CSS](base-css.md)
 - **Notes**
   - [Pitfalls](pitfalls.md)
   - [Apprehensions](apprehensions.md)
