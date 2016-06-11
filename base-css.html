@@ -2,12 +2,12 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <link rel="stylesheet" href="assets/style.css?t=34b91bfb">
-    <script src="assets/script.js?t=4a85ba64"></script>
+    <link rel="stylesheet" href="assets/style.css?t=a44c9e9d">
+    <script src="assets/script.js?t=2bcc4b59"></script>
     <title>Base CSS</title>
     <meta name="viewport" content="width=device-width">
     <script>
-      if (false || window.location.hostname.indexOf("styleguide.bythepixel.com") === window.location.hostname.length - 25) {
+      if (false || window.location.hostname.indexOf("styleguide.cmfolio.com") === window.location.hostname.length - 22) {
         (function(d,o,c,p,r,e,s){d['GoogleAnalyticsObject']=r;d[r]=d[r]||function(){(d[r].q=d[r].q||[]).push(arguments)},d[r].l=1*new Date();e=o.createElement(c),s=o.getElementsByTagName(c)[0];e.async=1;e.src=p;s.parentNode.insertBefore(e,s)})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
         ga('create',"UA-XXX",'auto')
       }
@@ -18,98 +18,98 @@
       <div class="toggle menu-toggle js-menu-toggle"></div>
       <div class="body page-base-css">
         <div class="header-nav">
-          <div class="right"><a href="https://github.com/bythepixel/css" data-title="bythepixel/css" class="iconlink">
+          <div class="right"><a href="https://github.com/chadwithuhc/UI-Styleguide" data-title="chadwithuhc/UI-Styleguide" class="iconlink">
               <!-- span.title Open in GitHub--><span class="icon -github"></span></a>
           </div>
         </div>
         <div class="markdown-body"><h1 id="base-css">Base CSS</h1>
 <p>We use a <code>reset.css</code> file with a few additions of our own. Please copy this into all new projects:</p>
-<pre><code class="lang-css"><span class="hljs-tag">html</span>, <span class="hljs-tag">body</span>, <span class="hljs-tag">div</span>, <span class="hljs-tag">span</span>, <span class="hljs-tag">applet</span>, <span class="hljs-tag">object</span>, <span class="hljs-tag">iframe</span>,
-<span class="hljs-tag">h1</span>, <span class="hljs-tag">h2</span>, <span class="hljs-tag">h3</span>, <span class="hljs-tag">h4</span>, <span class="hljs-tag">h5</span>, <span class="hljs-tag">h6</span>, <span class="hljs-tag">p</span>, <span class="hljs-tag">blockquote</span>, <span class="hljs-tag">pre</span>,
-<span class="hljs-tag">a</span>, <span class="hljs-tag">abbr</span>, <span class="hljs-tag">acronym</span>, <span class="hljs-tag">address</span>, <span class="hljs-tag">big</span>, <span class="hljs-tag">cite</span>, <span class="hljs-tag">code</span>,
-<span class="hljs-tag">del</span>, <span class="hljs-tag">dfn</span>, <span class="hljs-tag">em</span>, <span class="hljs-tag">img</span>, <span class="hljs-tag">ins</span>, <span class="hljs-tag">kbd</span>, <span class="hljs-tag">q</span>, <span class="hljs-tag">s</span>, <span class="hljs-tag">samp</span>,
-<span class="hljs-tag">small</span>, <span class="hljs-tag">strike</span>, <span class="hljs-tag">strong</span>, <span class="hljs-tag">sub</span>, <span class="hljs-tag">sup</span>, <span class="hljs-tag">tt</span>, <span class="hljs-tag">var</span>,
-<span class="hljs-tag">b</span>, <span class="hljs-tag">u</span>, <span class="hljs-tag">i</span>, <span class="hljs-tag">center</span>,
-<span class="hljs-tag">dl</span>, <span class="hljs-tag">dt</span>, <span class="hljs-tag">dd</span>, <span class="hljs-tag">ol</span>, <span class="hljs-tag">ul</span>, <span class="hljs-tag">li</span>,
-<span class="hljs-tag">fieldset</span>, <span class="hljs-tag">form</span>, <span class="hljs-tag">label</span>, <span class="hljs-tag">legend</span>,
-<span class="hljs-tag">table</span>, <span class="hljs-tag">caption</span>, <span class="hljs-tag">tbody</span>, <span class="hljs-tag">tfoot</span>, <span class="hljs-tag">thead</span>, <span class="hljs-tag">tr</span>, <span class="hljs-tag">th</span>, <span class="hljs-tag">td</span>,
-<span class="hljs-tag">article</span>, <span class="hljs-tag">aside</span>, <span class="hljs-tag">canvas</span>, <span class="hljs-tag">details</span>, <span class="hljs-tag">embed</span>, 
-<span class="hljs-tag">figure</span>, <span class="hljs-tag">figcaption</span>, <span class="hljs-tag">footer</span>, <span class="hljs-tag">header</span>, <span class="hljs-tag">hgroup</span>, 
-<span class="hljs-tag">menu</span>, <span class="hljs-tag">nav</span>, <span class="hljs-tag">output</span>, <span class="hljs-tag">ruby</span>, <span class="hljs-tag">section</span>, <span class="hljs-tag">summary</span>,
-<span class="hljs-tag">time</span>, <span class="hljs-tag">mark</span>, <span class="hljs-tag">audio</span>, <span class="hljs-tag">video</span> <span class="hljs-rules">{
-    <span class="hljs-rule"><span class="pl-e">margin</span>:<span class="pl-s"><span class="hljs-number">0</span></span></span>;
-    <span class="hljs-rule"><span class="pl-e">padding</span>:<span class="pl-s"><span class="hljs-number">0</span></span></span>;
-    <span class="hljs-rule"><span class="pl-e">border</span>:<span class="pl-s"><span class="hljs-number">0</span></span></span>;
-    <span class="hljs-rule"><span class="pl-e">outline</span>:<span class="pl-s"><span class="hljs-number">0</span></span></span>;
-    <span class="hljs-rule"><span class="pl-e">font-size</span>:<span class="pl-s"><span class="hljs-number">100%</span></span></span>;
-    <span class="hljs-rule"><span class="pl-e">vertical-align</span>:<span class="pl-s">baseline</span></span>;
-    <span class="hljs-rule"><span class="pl-e">background</span>:<span class="pl-s">transparent</span></span>;
-}</span>
+<pre><code class="lang-css"><span class="hljs-selector-tag">html</span>, <span class="hljs-selector-tag">body</span>, <span class="hljs-selector-tag">div</span>, <span class="hljs-selector-tag">span</span>, <span class="hljs-selector-tag">applet</span>, <span class="hljs-selector-tag">object</span>, <span class="hljs-selector-tag">iframe</span>,
+<span class="hljs-selector-tag">h1</span>, <span class="hljs-selector-tag">h2</span>, <span class="hljs-selector-tag">h3</span>, <span class="hljs-selector-tag">h4</span>, <span class="hljs-selector-tag">h5</span>, <span class="hljs-selector-tag">h6</span>, <span class="hljs-selector-tag">p</span>, <span class="hljs-selector-tag">blockquote</span>, <span class="hljs-selector-tag">pre</span>,
+<span class="hljs-selector-tag">a</span>, <span class="hljs-selector-tag">abbr</span>, <span class="hljs-selector-tag">acronym</span>, <span class="hljs-selector-tag">address</span>, <span class="hljs-selector-tag">big</span>, <span class="hljs-selector-tag">cite</span>, <span class="hljs-selector-tag">code</span>,
+<span class="hljs-selector-tag">del</span>, <span class="hljs-selector-tag">dfn</span>, <span class="hljs-selector-tag">em</span>, <span class="hljs-selector-tag">img</span>, <span class="hljs-selector-tag">ins</span>, <span class="hljs-selector-tag">kbd</span>, <span class="hljs-selector-tag">q</span>, <span class="hljs-selector-tag">s</span>, <span class="hljs-selector-tag">samp</span>,
+<span class="hljs-selector-tag">small</span>, <span class="hljs-selector-tag">strike</span>, <span class="hljs-selector-tag">strong</span>, <span class="hljs-selector-tag">sub</span>, <span class="hljs-selector-tag">sup</span>, <span class="hljs-selector-tag">tt</span>, <span class="hljs-selector-tag">var</span>,
+<span class="hljs-selector-tag">b</span>, <span class="hljs-selector-tag">u</span>, <span class="hljs-selector-tag">i</span>, <span class="hljs-selector-tag">center</span>,
+<span class="hljs-selector-tag">dl</span>, <span class="hljs-selector-tag">dt</span>, <span class="hljs-selector-tag">dd</span>, <span class="hljs-selector-tag">ol</span>, <span class="hljs-selector-tag">ul</span>, <span class="hljs-selector-tag">li</span>,
+<span class="hljs-selector-tag">fieldset</span>, <span class="hljs-selector-tag">form</span>, <span class="hljs-selector-tag">label</span>, <span class="hljs-selector-tag">legend</span>,
+<span class="hljs-selector-tag">table</span>, <span class="hljs-selector-tag">caption</span>, <span class="hljs-selector-tag">tbody</span>, <span class="hljs-selector-tag">tfoot</span>, <span class="hljs-selector-tag">thead</span>, <span class="hljs-selector-tag">tr</span>, <span class="hljs-selector-tag">th</span>, <span class="hljs-selector-tag">td</span>,
+<span class="hljs-selector-tag">article</span>, <span class="hljs-selector-tag">aside</span>, <span class="hljs-selector-tag">canvas</span>, <span class="hljs-selector-tag">details</span>, <span class="hljs-selector-tag">embed</span>, 
+<span class="hljs-selector-tag">figure</span>, <span class="hljs-selector-tag">figcaption</span>, <span class="hljs-selector-tag">footer</span>, <span class="hljs-selector-tag">header</span>, <span class="hljs-selector-tag">hgroup</span>, 
+<span class="hljs-selector-tag">menu</span>, <span class="hljs-selector-tag">nav</span>, <span class="hljs-selector-tag">output</span>, <span class="hljs-selector-tag">ruby</span>, <span class="hljs-selector-tag">section</span>, <span class="hljs-selector-tag">summary</span>,
+<span class="hljs-selector-tag">time</span>, <span class="hljs-selector-tag">mark</span>, <span class="hljs-selector-tag">audio</span>, <span class="hljs-selector-tag">video</span> {
+    <span class="pl-e">margin</span>:<span class="hljs-number">0</span>;
+    <span class="pl-e">padding</span>:<span class="hljs-number">0</span>;
+    <span class="pl-e">border</span>:<span class="hljs-number">0</span>;
+    <span class="pl-e">outline</span>:<span class="hljs-number">0</span>;
+    <span class="pl-e">font-size</span>:<span class="hljs-number">100%</span>;
+    <span class="pl-e">vertical-align</span>:baseline;
+    <span class="pl-e">background</span>:transparent;
+}
 
 <span class="pl-c">/* HTML5 display-role reset for older browsers */</span>
-<span class="hljs-tag">article</span>, <span class="hljs-tag">aside</span>, <span class="hljs-tag">details</span>, <span class="hljs-tag">figcaption</span>, <span class="hljs-tag">figure</span>, 
-<span class="hljs-tag">footer</span>, <span class="hljs-tag">header</span>, <span class="hljs-tag">hgroup</span>, <span class="hljs-tag">menu</span>, <span class="hljs-tag">nav</span>, <span class="hljs-tag">section</span> <span class="hljs-rules">{
-    <span class="hljs-rule"><span class="pl-e">display</span>:<span class="pl-s"> block</span></span>;
-}</span>
-
-<span class="hljs-tag">ul</span> <span class="hljs-rules">{
-    <span class="hljs-rule"><span class="pl-e">list-style</span>:<span class="pl-s">none</span></span>;
-}</span>
-
-<span class="hljs-tag">blockquote</span>, <span class="hljs-tag">q</span> <span class="hljs-rules">{
-    <span class="hljs-rule"><span class="pl-e">quotes</span>:<span class="pl-s">none</span></span>;
-}</span>
-
-<span class="hljs-rule"><span class="pl-e">blockquote</span>:<span class="pl-s">before, blockquote:after,
-q:before, q:after {
-    content:<span class="pl-s">&apos;&apos;</span></span></span>;
-    <span class="hljs-rule"><span class="pl-e">content</span>:<span class="pl-s">none</span></span>;
+<span class="hljs-selector-tag">article</span>, <span class="hljs-selector-tag">aside</span>, <span class="hljs-selector-tag">details</span>, <span class="hljs-selector-tag">figcaption</span>, <span class="hljs-selector-tag">figure</span>, 
+<span class="hljs-selector-tag">footer</span>, <span class="hljs-selector-tag">header</span>, <span class="hljs-selector-tag">hgroup</span>, <span class="hljs-selector-tag">menu</span>, <span class="hljs-selector-tag">nav</span>, <span class="hljs-selector-tag">section</span> {
+    <span class="pl-e">display</span>: block;
 }
 
-<span class="hljs-tag">table</span> <span class="hljs-rules">{
-    <span class="hljs-rule"><span class="pl-e">border-collapse</span>:<span class="pl-s">collapse</span></span>;
-    <span class="hljs-rule"><span class="pl-e">border-spacing</span>:<span class="pl-s"><span class="hljs-number">0</span></span></span>;
-}</span>
-
-<span class="hljs-tag">abbr</span><span class="hljs-attr_selector">[title]</span>, <span class="hljs-tag">dfn</span><span class="hljs-attr_selector">[title]</span> <span class="hljs-rules">{
-    <span class="hljs-rule"><span class="pl-e">border-bottom</span>:<span class="pl-s"><span class="hljs-number">1px</span> dotted</span></span>;
-    <span class="hljs-rule"><span class="pl-e">cursor</span>:<span class="pl-s">help</span></span>;
-}</span>
-
-<span class="hljs-tag">hr</span> <span class="hljs-rules">{
-    <span class="hljs-rule"><span class="pl-e">display</span>:<span class="pl-s">block</span></span>;
-    <span class="hljs-rule"><span class="pl-e">height</span>:<span class="pl-s"><span class="hljs-number">1px</span></span></span>;
-    <span class="hljs-rule"><span class="pl-e">border</span>:<span class="pl-s"><span class="hljs-number">0</span></span></span>;
-    <span class="hljs-rule"><span class="pl-e">border-top</span>:<span class="pl-s"><span class="hljs-number">1px</span> solid <span class="hljs-hexcolor">#eee</span></span></span>;
-    <span class="hljs-rule"><span class="pl-e">margin</span>:<span class="pl-s"><span class="hljs-number">1em</span> <span class="hljs-number">0</span></span></span>;
-    <span class="hljs-rule"><span class="pl-e">padding</span>:<span class="pl-s"><span class="hljs-number">0</span></span></span>;
-    <span class="hljs-rule"><span class="pl-e">clear</span>:<span class="pl-s">both</span></span>;
-}</span>
-
-<span class="hljs-tag">input</span>, <span class="hljs-tag">select</span> <span class="hljs-rules">{
-    <span class="hljs-rule"><span class="pl-e">vertical-align</span>:<span class="pl-s">middle</span></span>;
-}</span>
-
-*, *<span class="hljs-pseudo">:before</span>, *<span class="hljs-pseudo">:after</span> <span class="hljs-rules">{
-    <span class="hljs-rule"><span class="pl-e">-moz-box-sizing</span>:<span class="pl-s"> border-box</span></span>;
-    <span class="hljs-rule"><span class="pl-e">-webkit-box-sizing</span>:<span class="pl-s"> border-box</span></span>;
-    <span class="hljs-rule"><span class="pl-e">box-sizing</span>:<span class="pl-s"> border-box</span></span>;
-}</span>
-
-<span class="hljs-rule"><span class="pl-e">.clearfix</span>:<span class="pl-s">after, .clearfix:before {
-    clear: both</span></span>;
-    <span class="hljs-rule"><span class="pl-e">float</span>:<span class="pl-s"> none</span></span>;
-    <span class="hljs-rule"><span class="pl-e">visibility</span>:<span class="pl-s"> hidden</span></span>;
-    <span class="hljs-rule"><span class="pl-e">display</span>:<span class="pl-s"> table</span></span>;
-    <span class="hljs-rule"><span class="pl-e">font-size</span>:<span class="pl-s"> <span class="hljs-number">0</span></span></span>;
-    <span class="hljs-rule"><span class="pl-e">content</span>:<span class="pl-s"><span class="pl-s">&quot; &quot;</span></span></span>;
-    <span class="hljs-rule"><span class="pl-e">clear</span>:<span class="pl-s"> both</span></span>;
-    <span class="hljs-rule"><span class="pl-e">height</span>:<span class="pl-s"> <span class="hljs-number">0</span></span></span>;
+<span class="hljs-selector-tag">ul</span> {
+    <span class="pl-e">list-style</span>:none;
 }
 
-<span class="hljs-class">.clearfix</span> <span class="hljs-rules">{
-    <span class="hljs-rule"><span class="pl-e">zoom</span>:<span class="pl-s"> <span class="hljs-number">1</span></span></span>;
-}</span>
+<span class="hljs-selector-tag">blockquote</span>, <span class="hljs-selector-tag">q</span> {
+    <span class="pl-e">quotes</span>:none;
+}
+
+<span class="hljs-selector-tag">blockquote</span><span class="hljs-selector-pseudo">:before</span>, <span class="hljs-selector-tag">blockquote</span><span class="hljs-selector-pseudo">:after</span>,
+<span class="hljs-selector-tag">q</span><span class="hljs-selector-pseudo">:before</span>, <span class="hljs-selector-tag">q</span><span class="hljs-selector-pseudo">:after</span> {
+    <span class="pl-e">content</span>:<span class="pl-s">&apos;&apos;</span>;
+    <span class="pl-e">content</span>:none;
+}
+
+<span class="hljs-selector-tag">table</span> {
+    <span class="pl-e">border-collapse</span>:collapse;
+    <span class="pl-e">border-spacing</span>:<span class="hljs-number">0</span>;
+}
+
+<span class="hljs-selector-tag">abbr</span><span class="hljs-selector-attr">[title]</span>, <span class="hljs-selector-tag">dfn</span><span class="hljs-selector-attr">[title]</span> {
+    <span class="pl-e">border-bottom</span>:<span class="hljs-number">1px</span> dotted;
+    <span class="pl-e">cursor</span>:help;
+}
+
+<span class="hljs-selector-tag">hr</span> {
+    <span class="pl-e">display</span>:block;
+    <span class="pl-e">height</span>:<span class="hljs-number">1px</span>;
+    <span class="pl-e">border</span>:<span class="hljs-number">0</span>;
+    <span class="pl-e">border-top</span>:<span class="hljs-number">1px</span> solid <span class="hljs-number">#eee</span>;
+    <span class="pl-e">margin</span>:<span class="hljs-number">1em</span> <span class="hljs-number">0</span>;
+    <span class="pl-e">padding</span>:<span class="hljs-number">0</span>;
+    <span class="pl-e">clear</span>:both;
+}
+
+<span class="hljs-selector-tag">input</span>, <span class="hljs-selector-tag">select</span> {
+    <span class="pl-e">vertical-align</span>:middle;
+}
+
+*, *<span class="hljs-selector-pseudo">:before</span>, *<span class="hljs-selector-pseudo">:after</span> {
+    <span class="pl-e">-moz-box-sizing</span>: border-box;
+    <span class="pl-e">-webkit-box-sizing</span>: border-box;
+    <span class="pl-e">box-sizing</span>: border-box;
+}
+
+<span class="hljs-selector-class">.clearfix</span><span class="hljs-selector-pseudo">:after</span>, <span class="hljs-selector-class">.clearfix</span><span class="hljs-selector-pseudo">:before</span> {
+    <span class="pl-e">clear</span>: both;
+    <span class="pl-e">float</span>: none;
+    <span class="pl-e">visibility</span>: hidden;
+    <span class="pl-e">display</span>: table;
+    <span class="pl-e">font-size</span>: <span class="hljs-number">0</span>;
+    <span class="pl-e">content</span>:<span class="pl-s">&quot; &quot;</span>;
+    <span class="pl-e">clear</span>: both;
+    <span class="pl-e">height</span>: <span class="hljs-number">0</span>;
+}
+
+<span class="hljs-selector-class">.clearfix</span> {
+    <span class="pl-e">zoom</span>: <span class="hljs-number">1</span>;
+}
 </code></pre>
 <h2 id="benefits-and-changes">Benefits &amp; Changes</h2>
 <ul>
@@ -125,14 +125,26 @@ q:before, q:after {
 
         </div>
         <div class="footer-nav">
-          <div class="left"><a href="component-file-structure.html"><span class="title">Component File Structure</span></a></div>
-          <div class="right"><a href="pitfalls.html"><span class="label">Next: </span><span class="title">Pitfalls</span></a></div>
+          <div class="left"><a href="index.html"><span class="title">UI Style Guide</span></a></div>
+          <div class="right"><a href="component-file-structure.html"><span class="label">Next: </span><span class="title">Component File Structure</span></a></div>
         </div>
       </div>
       <div class="menu toc-menu">
         <li class="menu-item -level-0 -parent">
           <ul class="submenu">
-            <li class="menu-item -level-1"><a href="index.html" class="link title  link-index">CSS Style Guide</a>
+            <li class="menu-item -level-1"><a href="index.html" class="link title  link-index">UI Style Guide</a>
+            </li>
+            <li class="menu-item -level-1 -parent"><span class="title">Structure</span>
+              <ul class="submenu">
+                <li class="menu-item -level-2"><a href="base-css.html" class="link title -active link-base-css">Base CSS</a>
+                  <ul class="headings heading-list">
+                    <li class="heading-item -depth-2"><a href="#benefits-and-changes" class="hlink link-benefits-and-changes">Benefits &amp; Changes</a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="menu-item -level-2"><a href="component-file-structure.html" class="link title  link-component-file-structure">Component File Structure</a>
+                </li>
+              </ul>
             </li>
             <li class="menu-item -level-1 -parent"><span class="title">Components</span>
               <ul class="submenu">
@@ -147,18 +159,6 @@ q:before, q:after {
                 <li class="menu-item -level-2"><a href="layouts.html" class="link title  link-layouts">Layouts</a>
                 </li>
                 <li class="menu-item -level-2"><a href="helpers.html" class="link title  link-helpers">Helpers</a>
-                </li>
-              </ul>
-            </li>
-            <li class="menu-item -level-1 -parent"><span class="title">Structure</span>
-              <ul class="submenu">
-                <li class="menu-item -level-2"><a href="component-file-structure.html" class="link title  link-component-file-structure">Component File Structure</a>
-                </li>
-                <li class="menu-item -level-2"><a href="base-css.html" class="link title -active link-base-css">Base CSS</a>
-                  <ul class="headings heading-list">
-                    <li class="heading-item -depth-2"><a href="#benefits-and-changes" class="hlink link-benefits-and-changes">Benefits &amp; Changes</a>
-                    </li>
-                  </ul>
                 </li>
               </ul>
             </li>

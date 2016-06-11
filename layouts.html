@@ -2,12 +2,12 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <link rel="stylesheet" href="assets/style.css?t=34b91bfb">
-    <script src="assets/script.js?t=4a85ba64"></script>
+    <link rel="stylesheet" href="assets/style.css?t=a44c9e9d">
+    <script src="assets/script.js?t=2bcc4b59"></script>
     <title>Layouts</title>
     <meta name="viewport" content="width=device-width">
     <script>
-      if (false || window.location.hostname.indexOf("styleguide.bythepixel.com") === window.location.hostname.length - 25) {
+      if (false || window.location.hostname.indexOf("styleguide.cmfolio.com") === window.location.hostname.length - 22) {
         (function(d,o,c,p,r,e,s){d['GoogleAnalyticsObject']=r;d[r]=d[r]||function(){(d[r].q=d[r].q||[]).push(arguments)},d[r].l=1*new Date();e=o.createElement(c),s=o.getElementsByTagName(c)[0];e.async=1;e.src=p;s.parentNode.insertBefore(e,s)})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
         ga('create',"UA-XXX",'auto')
       }
@@ -18,44 +18,50 @@
       <div class="toggle menu-toggle js-menu-toggle"></div>
       <div class="body page-layouts">
         <div class="header-nav">
-          <div class="right"><a href="https://github.com/bythepixel/css" data-title="bythepixel/css" class="iconlink">
+          <div class="right"><a href="https://github.com/chadwithuhc/UI-Styleguide" data-title="chadwithuhc/UI-Styleguide" class="iconlink">
               <!-- span.title Open in GitHub--><span class="icon -github"></span></a>
           </div>
         </div>
         <div class="markdown-body"><h1 id="layouts">Layouts</h1>
 <p><img src="images/layouts.png" alt=""></p>
-<h2 id="avoid-positioning-properties">Avoid positioning properties</h2>
-<p>Components should be made in a way that they&apos;re reusable in different containers. Avoid putting these properties in components:</p>
+<h2 id="positioning-properties">Positioning Properties</h2>
+<p>Components should be made in a way that they&apos;re reusable in different containers. For that reason, we want to reserve positioning properties for Layouts:</p>
 <ul>
 <li>Positioning (<code>position</code>, <code>top</code>, <code>left</code>, <code>right</code>, <code>bottom</code>)</li>
 <li>Floats (<code>float</code>, <code>clear</code>)</li>
 <li>Margins (<code>margin</code>)</li>
-<li>Dimensions (<code>width</code>, <code>height</code>) *</li>
+<li>Dimensions (<code>width</code>, <code>height</code>)</li>
+<li>Media Queries (<code>@media (...)</code>)</li>
 </ul>
-<p>We will apply custom positioning, sizing, etc. on the layout components.</p>
-<h2 id="fixed-dimensions">Fixed dimensions</h2>
-<p>Exception to these would be elements that have fixed width/heights, such as <strong>avatars</strong> and <strong>logos</strong>.</p>
+<p>This allows our components to be reusable in various layouts without excessive overrides since positioning is most commonly overridden CSS style.</p>
+<p>A few <strong>Exceptions</strong> exist though:</p>
+<p><strong>Margin</strong><br>
+Basic margins for stacked items in a normal page flow. For example, a bottom margin on a button, unordered list, etc.</p>
+<p><strong>Fixed Dimensions</strong><br>
+Elements that have fixed width/heights, such as <strong>avatars</strong> and <strong>logos</strong>, are allowed to have set values.</p>
 <h2 id="define-positioning-in-parents">Define positioning in parents</h2>
-<p>If you need to define these, try to define them in whatever context they will be in. In this example below, notice that the widths and floats are applied on the <em>list</em> component, not the component itself.</p>
-<pre><code class="lang-scss"><span class="hljs-class">.article-list</span> {
-  &amp; {
-    <span class="hljs-at_rule">@<span class="pl-k">include</span><span class="hljs-preprocessor"> clearfix</span>;</span>
+<p>If you need to define positioning, try to define them in whatever context they will be in. In this example below, notice that the widths and floats are applied on the <em>list</em> component, not the component itself.</p>
+<pre><code class="lang-scss"><span class="pl-c">// In this example, `.article-list` is considered a container component</span>
+<span class="pl-c">//   It can have it&apos;s own positioning properties in a layout if needed</span>
+<span class="hljs-selector-class">.article-list</span> {
+  <span class="hljs-selector-class">.article-card</span> {
+    <span class="pl-e">width</span>: <span class="hljs-number">33.3%</span>;
+    <span class="pl-e">float</span>: left;
   }
-
-  <span class="hljs-class">.article-card</span> {
-    <span class="pl-e">width</span><span class="pl-s">: <span class="hljs-number">33.3%</span>;</span>
-    <span class="pl-e">float</span><span class="pl-s">: left;</span>
-  }
-}
-
-<span class="hljs-class">.article-card</span> {
-  &amp; { <span class="pl-c">/* ... */</span> }
-  &amp;__image { <span class="pl-c">/* ... */</span> }
-  &amp;__title { <span class="pl-c">/* ... */</span> }
-  &amp;__category { <span class="pl-c">/* ... */</span> }
 }
 </code></pre>
-<p class="pull-box">How do you apply margins outside a layout? Try it with Helpers.
+<p>Now if we needed to adjust positioning on the list component, we can do it in the layout styles. Changes made to layouts will be stored in the page-specific CSS (E.g.<code>articles.css</code>).</p>
+<p>These are still written in BEM style with the page name as the root element:</p>
+<pre><code class="lang-scss"><span class="hljs-selector-class">.articles-page__recent-articles</span> {
+  <span class="pl-c">/* ... */</span>
+  
+  <span class="hljs-selector-class">.article-list</span> {
+    <span class="pl-e">width</span>: <span class="hljs-number">25%</span>;
+    <span class="pl-e">float</span>: right;
+  }
+}
+</code></pre>
+<p class="pull-box">Just want to add a quick change to color, spacing, etc.? Try it with Helpers.
 <a href="helpers.html">Continue &#x2192;</a></p>
 
         </div>
@@ -67,7 +73,15 @@
       <div class="menu toc-menu">
         <li class="menu-item -level-0 -parent">
           <ul class="submenu">
-            <li class="menu-item -level-1"><a href="index.html" class="link title  link-index">CSS Style Guide</a>
+            <li class="menu-item -level-1"><a href="index.html" class="link title  link-index">UI Style Guide</a>
+            </li>
+            <li class="menu-item -level-1 -parent"><span class="title">Structure</span>
+              <ul class="submenu">
+                <li class="menu-item -level-2"><a href="base-css.html" class="link title  link-base-css">Base CSS</a>
+                </li>
+                <li class="menu-item -level-2"><a href="component-file-structure.html" class="link title  link-component-file-structure">Component File Structure</a>
+                </li>
+              </ul>
             </li>
             <li class="menu-item -level-1 -parent"><span class="title">Components</span>
               <ul class="submenu">
@@ -81,23 +95,13 @@
                 </li>
                 <li class="menu-item -level-2"><a href="layouts.html" class="link title -active link-layouts">Layouts</a>
                   <ul class="headings heading-list">
-                    <li class="heading-item -depth-2"><a href="#avoid-positioning-properties" class="hlink link-avoid-positioning-properties">Avoid positioning properties</a>
-                    </li>
-                    <li class="heading-item -depth-2"><a href="#fixed-dimensions" class="hlink link-fixed-dimensions">Fixed dimensions</a>
+                    <li class="heading-item -depth-2"><a href="#positioning-properties" class="hlink link-positioning-properties">Positioning Properties</a>
                     </li>
                     <li class="heading-item -depth-2"><a href="#define-positioning-in-parents" class="hlink link-define-positioning-in-parents">Define positioning in parents</a>
                     </li>
                   </ul>
                 </li>
                 <li class="menu-item -level-2"><a href="helpers.html" class="link title  link-helpers">Helpers</a>
-                </li>
-              </ul>
-            </li>
-            <li class="menu-item -level-1 -parent"><span class="title">Structure</span>
-              <ul class="submenu">
-                <li class="menu-item -level-2"><a href="component-file-structure.html" class="link title  link-component-file-structure">Component File Structure</a>
-                </li>
-                <li class="menu-item -level-2"><a href="base-css.html" class="link title  link-base-css">Base CSS</a>
                 </li>
               </ul>
             </li>

@@ -2,10 +2,56 @@
   "toc": {
     "sections": [
       {
-        "title": "CSS Style Guide",
+        "title": "UI Style Guide",
         "source": "README.md",
         "url": "index.html",
         "slug": "index"
+      },
+      {
+        "title": "Structure",
+        "sections": [
+          {
+            "title": "Base CSS",
+            "source": "docs/base-css.md",
+            "url": "base-css.html",
+            "slug": "base-css",
+            "headings": [
+              {
+                "title": "Benefits & Changes",
+                "depth": 2,
+                "id": "benefits-and-changes"
+              }
+            ]
+          },
+          {
+            "title": "Component File Structure",
+            "source": "docs/component-file-structure.md",
+            "url": "component-file-structure.html",
+            "slug": "component-file-structure",
+            "headings": [
+              {
+                "title": "Basic Rules",
+                "depth": 2,
+                "id": "basic-rules"
+              },
+              {
+                "title": "CSS",
+                "depth": 2,
+                "id": "css"
+              },
+              {
+                "title": "JS",
+                "depth": 2,
+                "id": "js"
+              },
+              {
+                "title": "HTML",
+                "depth": 2,
+                "id": "html"
+              }
+            ]
+          }
+        ]
       },
       {
         "title": "Components",
@@ -99,14 +145,9 @@
             "slug": "layouts",
             "headings": [
               {
-                "title": "Avoid positioning properties",
+                "title": "Positioning Properties",
                 "depth": 2,
-                "id": "avoid-positioning-properties"
-              },
-              {
-                "title": "Fixed dimensions",
-                "depth": 2,
-                "id": "fixed-dimensions"
+                "id": "positioning-properties"
               },
               {
                 "title": "Define positioning in parents",
@@ -130,52 +171,6 @@
                 "title": "Organizing helpers",
                 "depth": 2,
                 "id": "organizing-helpers"
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "title": "Structure",
-        "sections": [
-          {
-            "title": "Component File Structure",
-            "source": "docs/component-file-structure.md",
-            "url": "component-file-structure.html",
-            "slug": "component-file-structure",
-            "headings": [
-              {
-                "title": "Basic Rules",
-                "depth": 2,
-                "id": "basic-rules"
-              },
-              {
-                "title": "CSS",
-                "depth": 2,
-                "id": "css"
-              },
-              {
-                "title": "JS",
-                "depth": 2,
-                "id": "js"
-              },
-              {
-                "title": "HTML",
-                "depth": 2,
-                "id": "html"
-              }
-            ]
-          },
-          {
-            "title": "Base CSS",
-            "source": "docs/base-css.md",
-            "url": "base-css.html",
-            "slug": "base-css",
-            "headings": [
-              {
-                "title": "Benefits & Changes",
-                "depth": 2,
-                "id": "benefits-and-changes"
               }
             ]
           }
@@ -234,8 +229,47 @@
   "index": {
     "index.html": {
       "source": "README.md",
-      "title": "CSS Style Guide",
+      "title": "UI Style Guide",
       "slug": "index"
+    },
+    "base-css.html": {
+      "source": "docs/base-css.md",
+      "title": "Base CSS",
+      "slug": "base-css",
+      "headings": [
+        {
+          "title": "Benefits & Changes",
+          "depth": 2,
+          "id": "benefits-and-changes"
+        }
+      ]
+    },
+    "component-file-structure.html": {
+      "source": "docs/component-file-structure.md",
+      "title": "Component File Structure",
+      "slug": "component-file-structure",
+      "headings": [
+        {
+          "title": "Basic Rules",
+          "depth": 2,
+          "id": "basic-rules"
+        },
+        {
+          "title": "CSS",
+          "depth": 2,
+          "id": "css"
+        },
+        {
+          "title": "JS",
+          "depth": 2,
+          "id": "js"
+        },
+        {
+          "title": "HTML",
+          "depth": 2,
+          "id": "html"
+        }
+      ]
     },
     "components.html": {
       "source": "docs/components.md",
@@ -321,14 +355,9 @@
       "slug": "layouts",
       "headings": [
         {
-          "title": "Avoid positioning properties",
+          "title": "Positioning Properties",
           "depth": 2,
-          "id": "avoid-positioning-properties"
-        },
-        {
-          "title": "Fixed dimensions",
-          "depth": 2,
-          "id": "fixed-dimensions"
+          "id": "positioning-properties"
         },
         {
           "title": "Define positioning in parents",
@@ -351,45 +380,6 @@
           "title": "Organizing helpers",
           "depth": 2,
           "id": "organizing-helpers"
-        }
-      ]
-    },
-    "component-file-structure.html": {
-      "source": "docs/component-file-structure.md",
-      "title": "Component File Structure",
-      "slug": "component-file-structure",
-      "headings": [
-        {
-          "title": "Basic Rules",
-          "depth": 2,
-          "id": "basic-rules"
-        },
-        {
-          "title": "CSS",
-          "depth": 2,
-          "id": "css"
-        },
-        {
-          "title": "JS",
-          "depth": 2,
-          "id": "js"
-        },
-        {
-          "title": "HTML",
-          "depth": 2,
-          "id": "html"
-        }
-      ]
-    },
-    "base-css.html": {
-      "source": "docs/base-css.md",
-      "title": "Base CSS",
-      "slug": "base-css",
-      "headings": [
-        {
-          "title": "Benefits & Changes",
-          "depth": 2,
-          "id": "benefits-and-changes"
         }
       ]
     },
@@ -435,14 +425,14 @@
   },
   "sources": {
     "README.md": "index.html",
+    "docs/base-css.md": "base-css.html",
+    "docs/component-file-structure.md": "component-file-structure.html",
     "docs/components.md": "components.html",
     "docs/elements.md": "elements.html",
     "docs/modifiers.md": "modifiers.html",
     "docs/nested-components.md": "nested-components.html",
     "docs/layouts.md": "layouts.html",
     "docs/helpers.md": "helpers.html",
-    "docs/component-file-structure.md": "component-file-structure.html",
-    "docs/base-css.md": "base-css.html",
     "docs/pitfalls.md": "pitfalls.html",
     "docs/apprehensions.md": "apprehensions.html",
     "docs/other-resources.md": "other-resources.html",

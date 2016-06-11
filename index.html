@@ -2,12 +2,12 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <link rel="stylesheet" href="assets/style.css?t=34b91bfb">
-    <script src="assets/script.js?t=4a85ba64"></script>
-    <title>CSS Style Guide</title>
+    <link rel="stylesheet" href="assets/style.css?t=a44c9e9d">
+    <script src="assets/script.js?t=2bcc4b59"></script>
+    <title>UI Style Guide</title>
     <meta name="viewport" content="width=device-width">
     <script>
-      if (false || window.location.hostname.indexOf("styleguide.bythepixel.com") === window.location.hostname.length - 25) {
+      if (false || window.location.hostname.indexOf("styleguide.cmfolio.com") === window.location.hostname.length - 22) {
         (function(d,o,c,p,r,e,s){d['GoogleAnalyticsObject']=r;d[r]=d[r]||function(){(d[r].q=d[r].q||[]).push(arguments)},d[r].l=1*new Date();e=o.createElement(c),s=o.getElementsByTagName(c)[0];e.async=1;e.src=p;s.parentNode.insertBefore(e,s)})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
         ga('create',"UA-XXX",'auto')
       }
@@ -18,28 +18,35 @@
       <div class="toggle menu-toggle js-menu-toggle"></div>
       <div class="body page-index">
         <div class="header-nav">
-          <div class="right"><a href="https://github.com/bythepixel/css" data-title="bythepixel/css" class="iconlink">
+          <div class="right"><a href="https://github.com/chadwithuhc/UI-Styleguide" data-title="chadwithuhc/UI-Styleguide" class="iconlink">
               <!-- span.title Open in GitHub--><span class="icon -github"></span></a>
           </div>
         </div>
-        <div class="markdown-body"><h5 style="display:none" id="viewing-this-from-github-visit-the-website-for-the-full-experience.-styleguide.bythepixel.com">Viewing this from GitHub? Visit the website for the full experience. <strong><a href="http://styleguide.bythepixel.com">styleguide.bythepixel.com &#x2192;</a></strong></h5>
+        <div class="markdown-body"><h5 style="display:none" id="viewing-this-from-github-visit-the-website-for-the-full-experience.-chadwithuhc.github.ioui-styleguide">Viewing this from GitHub? Visit the website for the full experience. <strong><a href="http://chadwithuhc.github.io/UI-Styleguide/">chadwithuhc.github.io/UI-Styleguide &#x2192;</a></strong></h5>
 <hr style="display:none">
-<p><img src="http://bythepixel.com/img/btp-logo.png" alt=""></p>
-<h1 class="massive-header -with-tagline" id="css-style-guide">CSS Style Guide</h1>
-<p>Guidelines and best practices when building UIs.</p>
+<h1 class="massive-header -with-tagline" id="ui-style-guide">UI Style Guide</h1>
+<p>Guidelines for building maintainable UIs.</p>
 <p class="pull-box"><a href="components.html">Get Started &#x2192;</a></p>
 <hr style="display:none">
 <p style="color: #aaa; font-size: .8em; position: absolute; bottom: 8em"><em>Based upon:</em> <a href="http://rscss.io"><strong>rscss</strong></a> &#xA9; 2015+, Rico Sta. Cruz. Released under the <a href="http://mit-license.org">MIT</a> License.</p>
 
         </div>
         <div class="footer-nav">
-          <div class="right"><a href="components.html"><span class="label">Next: </span><span class="title">About components</span></a></div>
+          <div class="right"><a href="base-css.html"><span class="label">Next: </span><span class="title">Base CSS</span></a></div>
         </div>
       </div>
       <div class="menu toc-menu">
         <li class="menu-item -level-0 -parent">
           <ul class="submenu">
-            <li class="menu-item -level-1"><a href="index.html" class="link title -active link-index">CSS Style Guide</a>
+            <li class="menu-item -level-1"><a href="index.html" class="link title -active link-index">UI Style Guide</a>
+            </li>
+            <li class="menu-item -level-1 -parent"><span class="title">Structure</span>
+              <ul class="submenu">
+                <li class="menu-item -level-2"><a href="base-css.html" class="link title  link-base-css">Base CSS</a>
+                </li>
+                <li class="menu-item -level-2"><a href="component-file-structure.html" class="link title  link-component-file-structure">Component File Structure</a>
+                </li>
+              </ul>
             </li>
             <li class="menu-item -level-1 -parent"><span class="title">Components</span>
               <ul class="submenu">
@@ -54,14 +61,6 @@
                 <li class="menu-item -level-2"><a href="layouts.html" class="link title  link-layouts">Layouts</a>
                 </li>
                 <li class="menu-item -level-2"><a href="helpers.html" class="link title  link-helpers">Helpers</a>
-                </li>
-              </ul>
-            </li>
-            <li class="menu-item -level-1 -parent"><span class="title">Structure</span>
-              <ul class="submenu">
-                <li class="menu-item -level-2"><a href="component-file-structure.html" class="link title  link-component-file-structure">Component File Structure</a>
-                </li>
-                <li class="menu-item -level-2"><a href="base-css.html" class="link title  link-base-css">Base CSS</a>
                 </li>
               </ul>
             </li>

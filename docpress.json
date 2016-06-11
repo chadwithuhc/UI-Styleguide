@@ -1,5 +1,5 @@
 {
-  "github": "bythepixel/css",
+  "github": "chadwithuhc/UI-Styleguide",
   "css": [],
   "markdown": {
     "plugins": {
@@ -8,6 +8,6 @@
   },
   "googleAnalytics": {
     "id": "UA-XXX",
-    "domain": "styleguide.bythepixel.com"
+    "domain": "styleguide.cmfolio.com"
   }
 }
