@@ -1,16 +1,14 @@
-##### Viewing this from GitHub? Visit the website for the full experience. **[styleguide.bythepixel.com →](http://styleguide.bythepixel.com)**
+##### Viewing this from GitHub? Visit the website for the full experience. **[chadwithuhc.github.io/UI-Styleguide →](http://chadwithuhc.github.io/UI-Styleguide/)**
 <!-- {h5: style='display:none'} -->
 
 ----
 <!-- {hr: style='display:none'} -->
 
-![](http://bythepixel.com/img/btp-logo.png)
-
-# CSS Style Guide
+# UI Style Guide
 
 <!-- {h1:.massive-header.-with-tagline} -->
 
-Guidelines and best practices when building UIs.
+Guidelines for building maintainable UIs.
 
 [Get Started →](docs/components.md)
 <!-- {p:.pull-box} -->

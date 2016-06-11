@@ -1,6 +1,9 @@
 # Table of contents
 
-- [CSS Style Guide](../README.md)
+- [UI Style Guide](../README.md)
+- **Structure**
+  - [Base CSS](base-css.md)
+  - [Component File Structure](component-file-structure.md)
 - **Components**
   - [About components](components.md)
   - [Elements](elements.md)
@@ -8,9 +11,6 @@
   - [Nested components](nested-components.md)
   - [Layouts](layouts.md)
   - [Helpers](helpers.md)
-- **Structure**
-  - [Component File Structure](component-file-structure.md)
-  - [Base CSS](base-css.md)
 - **Notes**
   - [Pitfalls](pitfalls.md)
   - [Apprehensions](apprehensions.md)

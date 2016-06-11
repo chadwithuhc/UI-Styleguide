@@ -29,9 +29,9 @@ To run the server locally and live watch changes, use the command:
 
 Build the project by running the following command:
 
-`npm run build`
+`docpress`
 
-Then, to deploy use:
+Then, when it's done building you can exit and deploy using:
 
 `npm run deploy`
 
